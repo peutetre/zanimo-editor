@@ -126,6 +126,7 @@ a:hover {
   display: block;
   margin: 0 0 10px 15px;
   position: static;
+  zoom: 0.6;
 }
 .documentation section.content div.doc-content li {
   margin: 0 0 0 10px;
