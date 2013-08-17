@@ -239,6 +239,8 @@ a:hover {
   height: 100%;
   width: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 .editor div.toolbar {
   -webkit-user-select: none;
@@ -321,8 +323,11 @@ textarea {
   height: calc(100% - 80px);
   border: none;
   border-top: 1px solid #dadada;
-  padding: 10px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 

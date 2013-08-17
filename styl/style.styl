@@ -229,6 +229,8 @@ a:hover
     height 100%
     width 100%
     position absolute
+    top 0
+    left 0
     div.toolbar
         -webkit-user-select:none;
         height 50px
@@ -306,7 +308,10 @@ textarea
     height: unquote('calc(100% - 80px)');
     border none
     border-top: 1px solid lighterGray;
-    padding 10px
     overflow: auto;
     -webkit-overflow-scrolling : touch;
+    -webkit-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
 
