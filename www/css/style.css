@@ -92,7 +92,7 @@ a:hover {
   background: #75acdf;
 }
 .documentation section.content div.doc-content p {
-  margin: 5px 10px 5px 20px;
+  margin: 5px 10px 5px 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #565961;
@@ -160,7 +160,7 @@ a:hover {
 }
 .documentation section.content div.doc-content pre {
   font-family: "Monaco", sans-serif;
-  margin: 0 10px 0 20px;
+  margin: 0 10px;
   padding: 5px;
   overflow: scroll;
   overflow-y: hidden;
