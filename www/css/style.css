@@ -208,6 +208,7 @@ a:hover {
   position: relative;
   background: #76bdff;
   border-bottom: 1px solid #75acdf;
+  cursor: pointer;
 }
 .documentation div.active-area div.chip {
   background: #76bdff;
@@ -225,9 +226,8 @@ a:hover {
   color: #f0f1f3;
   top: -2px;
   left: 38px;
-  cursor: pointer;
 }
-.documentation div.active-area a.github {
+.documentation div.active-area a.sign {
   text-decoration: none;
   position: absolute;
   top: 6px;
@@ -267,7 +267,7 @@ a:hover {
   color: #76bdff;
   cursor: pointer;
 }
-.editor div.toolbar .button.icon-github-alt {
+.editor div.toolbar .button.sign {
   float: right;
   right: 10px;
   position: relative;
