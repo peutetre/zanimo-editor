@@ -16,7 +16,10 @@
     "q": "0.9.x",
     "zanimo": "0.0.7",
     "qstart": "0.0.4",
-    "mask": "0.1.1"
+    "mask": "0.1.1",
+    "github-api": "0.7.0",
+    "jquery-browserify": "~1.8.1",
+    "cookie" : "0.1.0"
   },
   "devDependencies": {
     "browserify": "2.11",
