@@ -18,8 +18,9 @@
     "qstart": "0.0.4",
     "mask": "0.1.1",
     "github-api": "0.7.0",
-    "jquery-browserify": "~1.8.1",
-    "cookie" : "0.1.0"
+    "jquery-browserify": "1.8.1",
+    "cookie": "0.1.0",
+    "qajax": "~0.1.2"
   },
   "devDependencies": {
     "browserify": "2.11",
