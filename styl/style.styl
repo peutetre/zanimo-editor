@@ -202,7 +202,7 @@ a:hover
         background: niceBlue;
         border-bottom: 1px solid niceBlueGray;
         cursor: pointer;
-        div.chip
+        div.chip-container
             background: niceBlue;
             position: relative;
             width: 100px;
@@ -210,13 +210,41 @@ a:hover
             margin: auto;
             top: -20px;
             border-radius: 40px;
-            span
+            div.chip, div.chip2
                 position absolute
-                font-size 20px
-                font-size: 30px;
-                color niceGray
-                top: -2px;
-                left: 38px;
+                width 100%
+                height 100%
+                span
+                    position absolute
+                    font-size 20px
+                    font-size: 30px;
+                    color niceGray
+                    top: -2px;
+                    left: 38px;
+            div.msg
+                position absolute
+                width 100%
+                height 100%
+                strong
+                    position absolute
+                    color niceGray
+                    top: 23px;
+                    left: -100px;
+                    font-size: 17px;
+                    width: 300px;
+                    font-family: 'Roboto', sans-serif;
+                    opacity : 0
+            div.chip2
+                position absolute
+                width 100%
+                height 100%
+                span
+                    position absolute
+                    font-size 20px
+                    font-size: 30px;
+                    color niceGray
+                    top: -2px;
+                    left: 38px;
         a.sign
             text-decoration none
             position absolute
