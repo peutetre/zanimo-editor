@@ -248,6 +248,9 @@ a:hover {
   width: 300px;
   font-family: 'Roboto', sans-serif;
   opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .documentation div.active-area div.chip-container div.chip2 {
   position: absolute;
