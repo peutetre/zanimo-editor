@@ -118,13 +118,13 @@ a:hover {
   color: #5e809e;
 }
 .documentation section.content div.doc-content img {
-  margin: 0 0 0 10px;
+  margin: 10px 0 10px 15px;
   position: relative;
   top: 4px;
 }
 .documentation section.content div.doc-content img.sauce {
   display: block;
-  margin: 0 0 10px 15px;
+  margin: 10px 0 10px 15px;
   position: static;
   zoom: 0.6;
 }

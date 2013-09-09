@@ -19,7 +19,8 @@
     "mask": "0.1.1",
     "github-api": "0.7.0",
     "cookie": "0.1.0",
-    "qajax": "~0.1.2"
+    "qajax": "~0.1.2",
+    "qimage": "~1.0.0"
   },
   "devDependencies": {
     "browserify": "2.11",
