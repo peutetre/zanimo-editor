@@ -287,8 +287,21 @@ a:hover
             cursor pointer
         .button.sign
             float: right;
+            right: -26px;
+            position: relative;
+            z-index 8
+        .button.logout
+            float: right;
             right: 10px;
             position: relative;
+            z-index 6
+            img
+                width: 26px;
+                height: 26px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: 1px solid #dadada;
         .select-container
             background: url(../images/arrow@2x.png) 90% 5px no-repeat;
             color niceBlue
@@ -300,9 +313,9 @@ a:hover
             padding 0
             overflow hidden
             z-index: 1;
-            border: 1px solid lightGray;
+            border: 1px solid #dadada;
             border-radius: 4px 4px 4px 4px;
-            background-color: rgb(230, 230, 230);
+            background-color: #f3f3f3;
             .select
                 width: 140px;
                 font-size: 14px;
