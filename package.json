@@ -10,7 +10,8 @@
   },
   "scripts": {
     "build": "cat ./styl/style.styl | ./node_modules/stylus/bin/stylus  > ./www/css/style.css; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js --debug",
-    "open": "./node_modules/opener/opener.js ./www/index.html"
+    "open": "./node_modules/opener/opener.js ./www/index.html",
+    "doc" : "docco -l linear -o docs lib/*"
   },
   "dependencies": {
     "q": "0.9.7",
