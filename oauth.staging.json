@@ -1,0 +1,6 @@
+{
+  "api": "https://api.github.com",
+  "site": "https://github.com",
+  "clientId": "d5997d36ce16b3e6fd5e",
+  "gatekeeperUrl": "http://staging-zanimo.herokuapp.com/"
+}

@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "cat ./styl/style.styl | ./node_modules/stylus/bin/stylus  > ./www/css/style.css; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js --debug",
+    "prod": "cat ./styl/style.styl | ./node_modules/stylus/bin/stylus  > ./www/css/style.css; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js",
     "open": "./node_modules/opener/opener.js ./www/index.html",
     "doc" : "docco -l linear -o docs lib/*",
     "colony" : "colony ./lib/app.js -o colony -r ./README.md -s 4"
