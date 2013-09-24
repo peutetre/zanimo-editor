@@ -285,15 +285,11 @@ a:hover
             padding 0
             color niceBlue
             cursor pointer
-        .button.sign
-            float: right;
-            right: -26px;
-            position: relative;
+        .button.sign, .button.logout
+            right: 6px;
+            position: absolute;
             z-index 8
         .button.logout
-            float: right;
-            right: 10px;
-            position: relative;
             z-index 6
             img
                 width: 26px;
@@ -302,6 +298,7 @@ a:hover
                 top: 0;
                 left: 0;
                 border: 1px solid #dadada;
+                box-sizing border-box
         .select-container
             background: url(../images/arrow@2x.png) 90% 5px no-repeat;
             color niceBlue

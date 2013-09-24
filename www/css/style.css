@@ -305,16 +305,13 @@ a:hover {
   color: #76bdff;
   cursor: pointer;
 }
-.editor div.toolbar .button.sign {
-  float: right;
-  right: -26px;
-  position: relative;
+.editor div.toolbar .button.sign,
+.editor div.toolbar .button.logout {
+  right: 6px;
+  position: absolute;
   z-index: 8;
 }
 .editor div.toolbar .button.logout {
-  float: right;
-  right: 10px;
-  position: relative;
   z-index: 6;
 }
 .editor div.toolbar .button.logout img {
@@ -324,6 +321,7 @@ a:hover {
   top: 0;
   left: 0;
   border: 1px solid #dadada;
+  box-sizing: border-box;
 }
 .editor div.toolbar .select-container {
   background: url("../images/arrow@2x.png") 90% 5px no-repeat;
