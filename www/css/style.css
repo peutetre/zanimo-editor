@@ -460,6 +460,11 @@ textarea {
   color: #585858;
   margin: 0;
 }
+.prompt p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #444;
+}
 .prompt span {
   -webkit-appearance: none;
   font-weight: bold;
