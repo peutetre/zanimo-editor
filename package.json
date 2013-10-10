@@ -12,8 +12,8 @@
     "build": "cat ./styl/style.styl | ./node_modules/stylus/bin/stylus  > ./www/css/style.css; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js --debug",
     "prod": "cat ./styl/style.styl | ./node_modules/stylus/bin/stylus  > ./www/css/style.css; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js",
     "open": "./node_modules/opener/opener.js ./www/index.html",
-    "doc" : "docco -l linear -o docs lib/*",
-    "colony" : "colony ./lib/app.js -o colony -r ./README.md -s 4"
+    "doc": "docco -l linear -o docs lib/*",
+    "colony": "colony ./lib/app.js -o colony -r ./README.md -s 4"
   },
   "dependencies": {
     "q": "0.9.7",
@@ -23,7 +23,8 @@
     "github-api": "0.7.0",
     "cookie": "0.1.0",
     "qajax": "~0.1.2",
-    "qimage": "~1.0.0"
+    "qimage": "~1.0.1",
+    "image2base64": "0.0.2"
   },
   "devDependencies": {
     "browserify": "2.29.1",
