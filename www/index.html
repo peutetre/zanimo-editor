@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifiest='manifest.appcache'>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=10">
@@ -175,32 +175,43 @@ Zanimo(myDomElement)
 
 <script id="empty-script-help" type="text/tmpl">/*
  * Zanimo example script
- * You are in the body of an animation function
+ * You are in the body of a function
  * with 2 arguments:
  * - create: DOM element generator
  * - start: starts the animation
+ * and you need to return a promise.
+ * Q is also available.
  */
 
-var cubes = create([
-        {
-            background:"red",
-            left:"50px",
-            top:"50px",
-            opacity:0
-        },
-        {
-            background:"green",
-            left:"100px",
-            top:"170px",
-            opacity:0
-        }
-    ]),
-    show = Zanimo.transitionf("opacity", 1, 400),
-    anim = Zanimo.transitionf("transform", "translate3d(100px,0,0)", 400);
-return Zanimo(start(cubes[0]))
+var redCube = create({
+        background:'red',
+        height:'20px',
+        width:'20px',
+        left:'50px',
+        top:'50px',
+        opacity:0
+    }),
+    greenCube = create({
+        background:'green',
+        height:'20px',
+        width:'20px',
+        left:'100px',
+        top:'170px',
+        opacity:0
+    }),
+    show = Zanimo.transitionf(
+        'opacity', 1, 400
+    ),
+    anim = Zanimo.transitionf(
+        'transform',
+        'translate3d(100px,0,0)',
+        400
+    );
+
+return Zanimo(start(redCube))
     .then(show)
     .then(anim)
-    .then(Zanimo.f(cubes[1]))
+    .then(Zanimo.f(greenCube))
     .then(show)
     .then(anim);
 </script>
