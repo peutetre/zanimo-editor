@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "q": "0.9.7",
-    "zanimo": "0.0.8",
+    "zanimo": "0.0.9",
     "qstart": "0.0.4",
     "mask": "0.1.1",
     "github-api": "0.7.0",
