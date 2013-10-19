@@ -24,8 +24,7 @@
     "cookie": "0.1.0",
     "qajax": "~0.1.2",
     "qimage": "~1.0.1",
-    "image2base64": "0.0.2",
-    "uuid": "~1.4.1"
+    "image2base64": "0.0.2"
   },
   "devDependencies": {
     "browserify": "2.29.1",
