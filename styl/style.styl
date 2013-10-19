@@ -72,69 +72,12 @@ a:hover
         width 100%
         position relative
         div.doc-content
-            height: unquote('-webkit-calc(100% - 65px)');
-            height: unquote('-moz-calc(100% - 65px)');
-            height: unquote('-ms-calc(100% - 65px)');
-            height: unquote('calc(100% - 65px)');
+            height: 100%;
             overflow:auto;
             -webkit-overflow-scrolling:touch;
             max-width 1280px
             margin auto
-            a.download
-                width: 140px;
-                line-height: 40px;
-                margin: 15px auto;
-                display: block;
-                text-align: center;
-                background: niceBlue;
-                font-family: Anaheim, sans-serif;
-                font-size: 16px;
-                border-radius: 6px;
-                color: niceGray;
-                font-weight: bold;
-                border: 1px solid niceBlueGray;
-                text-decoration none
-                text-shadow: 0 -1px 2px backWithOpacity;
-                -moz-text-shadow: 0 -1px 2px backWithOpacity;
-                -ms-text-shadow: 0 -1px 2px backWithOpacity;
-            a.download:hover
-                background linkBackgroundHoverColor
             p
-                margin:5px 10px 5px 10px
-                font-family: 'Roboto', sans-serif;
-                font-size 14px
-                color mygray
-            p.description
-                font-size: 25px;
-                background: #76BDFF;
-                margin: 0;
-                padding: 10px;
-                border-bottom: 1px solid #9EA5AC;
-                border-top: 1px solid linkBackgroundHoverColor;
-                color: white;
-                -moz-text-shadow: 0 -1px 2px backWithOpacity;
-                -ms-text-shadow: 0 -1px 2px backWithOpacity;
-                text-shadow: 0 -1px 2px backWithOpacity;
-                a
-                    color white
-            ul
-                margin: 0 0 5px 30px;
-                list-style: disc;
-                color rgb(94, 128, 158)
-            img
-                margin: 10px 0 10px 15px
-                position: relative;
-                top: 4px;
-            img.sauce
-                display: block;
-                margin: 10px 0 10px 15px
-                position: static;
-                zoom: 0.6;
-            li
-                margin 0 0 0 10px
-                font-family: 'Roboto', sans-serif;
-                font-size 12px
-            h3
                 color: darkGray;
                 font-weight: bold;
                 font-size: 20px;
@@ -143,11 +86,6 @@ a:hover
                 text-shadow: 1px 1px 2px lightGray;
                 border-bottom: 1px solid rgba(118, 189, 255, 0.45)
                 padding 10px 5px
-            h3.building
-                display:inline-block;
-                border-bottom:none;
-            h3.normal
-                border-bottom:none;
             h2
                 color: darkGray;
                 font-weight: bold;
@@ -155,43 +93,6 @@ a:hover
                 margin: 20px 0 0 10px;
                 text-shadow: 1px 1px 2px lightGray;
                 font-size: 40px;
-            pre
-                font-family: "Monaco", sans-serif;
-                margin: 0 10px;
-                padding: 5px;
-                overflow: scroll;
-                overflow-y: hidden;
-                color: #354757;
-                font-weight: bold;
-                font-size: 13px;
-                background: rgba(255,255,255,0.8);
-            p.about
-                float right
-                position relative
-                right 10px
-                margin: 0 0 50px 0;
-        header
-            -webkit-user-select:none;
-            position absolute
-            bottom 0
-            width 100%
-            height: 65px;
-            padding: 15px 0 0 0;
-            background #f0f1f3
-            h1
-                margin 0 0 0 10px
-                width 100%
-                font-size 25px
-                font-family: "Molle", cursive;
-                font-weight bold
-                font-style italic
-                display inline
-                color mygray
-            span
-                font-size 15px
-                font-family: 'Anaheim', sans-serif;
-                font-style initial
-                margin: 0 0 0 6px;
 
     div.active-area
         -webkit-user-select:none;
@@ -335,6 +236,9 @@ a:hover
         height: unquote('calc(100% - 80px)');
         border-top: 1px solid lighterGray;
         background:rgb(253, 253, 253);
+        .CodeMirror-gutters
+            border-right: 1px solid rgb(236, 236, 236);
+            background: none;
 
 textarea
     position absolute

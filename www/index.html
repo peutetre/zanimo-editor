@@ -45,123 +45,65 @@
         <article class="documentation">
             <section class="content">
                 <div class="doc-content">
-                    <p class="description">
-                        Zanimo allows chaining transitions in a promise based way using <a href="https://github.com/kriskowal/q">Q.js</a>.
+                    <h2>API CHEAT SHEET</h2>
+
+                    <p>Zanimo(elt | promise[elt])
+                        <br> ➜  promise[elt]
+                        <br><br>
+                        Takes a dom element or a promise of a dom element and returns a promise of it.
                     </p>
 
-                    <p></p>
-
-                    <p>Zanimo.js is licensed under the terms of the MIT License.</p>
-
-                    <a class="download" href="https://github.com/peutetre/Zanimo/archive/0.0.7.zip">Download v0.0.7</a>
-
-                    <h3 class="normal">Targeted platforms</h3>
-
-                    <p>Zanimo targets the following platforms:</p>
-
-                    <ul>
-                        <li>Safari</li>
-                        <li>Firefox</li>
-                        <li>Chrome</li>
-                        <li>Internet Explorer 10</li>
-                    </ul>
-
-                    <h3 class="building">Building</h3>
-                    <div class="imgs"></div>
-                    <pre>$ make</pre>
-
-                    <h3 class="normal">Launch tests</h3>
-
-                    <p>To run tests in your shell, you need
-                        <a href="http://code.google.com/p/phantomjs/wiki/Installation">phantomjs</a>
+                    <p>Zanimo.transition(
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;elt,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;property,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;value,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;duration,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;[timingƒ]
+                        <br>)  ➜  promise[elt]
+                        <br><br>
+                        Start a CSS `property` transition with value `value` on the dom element `elt` with a duration of `duration` ms and an optional timing function `timingƒ`.
                     </p>
 
-                    <pre>$ make test</pre>
+                    <p>Zanimo.transitionf(
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;property,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;value,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;duration,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;[timingƒ]
+                        <br>)  ➜  (elt) ➜  promise[elt]
+                        <br><br>
+                        Wrap `Zanimo.transition` into a function; useful in a chain of promises.
+                    </p>
 
-                    <p>Or open <a href="test/index.html">test/index.html</a> in a web browser.</p>
+                    <p>Zanimo.transform(
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;elt,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;value,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;[overwrite]
+                        <br>)  ➜  promise[elt]
+                        <br><br>
+                        Set CSS transform property of dom element `elt` to `value` and return a promise of the dom element. Boolean argument `overwrite` allows to overwrite present transform property, defaults append.
+                    </p>
 
-                    <h2>API</h2>
+                    <p>Zanimo.transformf(
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;value,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;[overwrite]
+                        <br>)  ➜  (elt) ➜  promise[elt]
+                        <br><br>
+                        Wrap `Zanimo.transform` into a function; useful in a chain of promises.
+                    </p>
 
-                    <h3>Zanimo(elt | promise[elt]) ➜  promise[elt]</h3>
-                    <p>Takes a DOM element or a promise of a DOM element and returns a promise of the given element.</p>
+                    <p>Zanimo.all(
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;array[ (elt) ➜  promise[elt] ]
+                        <br>)  ➜  (elt) ➜  promise[elt]
+                        <br><br>
+                        Allows running multiples transitions on the same dom element at the same time.
+                    </p>
 
-<pre>
-Zanimo(myDomElement).then(function (elt) {
-    // do something with the DOM element
-}, function (reason) {
-    // do something when `myDOMElement` isn't a DOM element
-});
-</pre>
-
-                    <h3>Zanimo.transition(elt, property, value, duration, [timingFunction])  ➜  promise[elt]</h3>
-                    <p>Starts a transition on the given DOM element and returns a promise.
-                       For now Zanimo does not support hexadecimal color notation or 0px (just use 0) in the value argument.</p>
-
-<pre>
-Zanimo
-    .transition(myDomElement, "width", "200px", 200, "ease-in")
-    .then(
-        function (domElt) { /* do something on success */ },
-        function (reason) { /* do something on error */ }
-    );
-</pre>
-
-                    <h3>Zanimo.transitionf(property, value, duration, [timingFunction])  ➜  function(elt) ➜  promise[elt]</h3>
-                    <p>Encapsulates `Zanimo.transition()` in a function. Useful to define reusable transitions.</p>
-
-<pre>
-var widthTransition = Zanimo.transitionf("width", "200px", 200, "ease-in"),
-    heightTransition = Zanimo.transitionf("height", "300px", 200, "ease-in");
-
-Zanimo(myDomElement)
-    .then(widthTransition)
-    .then(heightTransition);
-</pre>
-
-
-                    <h3>Zanimo.transform(elt, value, [overwrite])  ➜  promise[elt]</h3>
-                    <p>Applies a css transform on the given DOM element.</p>
-
-<pre>
-Zanimo
-    .transform(myDomElement, "translate3d(200px, 200px, 0)")
-    .then(function (domElt) { console.log("Done..."); });
-</pre>
-
-                    <h3>Zanimo.transformf(value, [overwrite])  ➜  function(elt) ➜  promise[elt]</h3>
-                    <p>Encapsulates `Zanimo.transform()` in a function. Useful for chaining.</p>
-
-<pre>
-Zanimo(myDomElt).then(Zanimo.transformf("scale(2)", true));
-</pre>
-                    <h3>Zanimo.all(array[function(elt) ➜  promise[elt]])  ➜  function(elt) ➜  promise[elt]</h3>
-                    <p>Helps executing multiple transitions in the same step.</p>
-
-<pre>
-var anim1 = Zanimo.transitionf("opacity", 0.5, 200),
-    anim2 = Zanimo.transitionf("width", "400px", 400);
-
-Zanimo(myDomElt).then(Zanimo.all([anim1, anim2]));
-</pre>
-                    <h3>Zanimo.f(elt | promise[elt]) ➜  function(elt) ➜  promise[elt]</h3>
-                    <p>Useful for changing a given DOM element in a promises chain.</p>
-
-<pre>
-var anim200pxLeft = Zanimo.transitionf("transform", "translate(200px, 0)", 200);
-
-Zanimo(myDomElement)
-    .then(anim200pxLeft)
-    .then(Zanimo.f(myOtherDomElement))
-    .then(anim200pxLeft)
-</pre>
-                    <h3 class="normal">Credits</h3>
-                    <p><a href="http://bobylito.me/">@bobylito</a> who came up with the name <i>Zanimo</i>.</p>
-                    <p class="about">by <a href="http://twitter.com/42loops">@42loops</a></p>
+                    <p>Zanimo.f(elt | promise[elt])
+                        <br>➜  (elt) ➜  promise[elt]
+                        <br><br>
+                        Wrap `Zanimo()` into a function; useful in a chain of promises;
+                    </p>
                 </div>
-                <header>
-                    <h1> Zanimo.js</h1>
-                    <span>Promise based transitions</span>
-                </header>
             </section>
             <div class="active-area">
                 <div class="chip-container">
@@ -223,16 +165,16 @@ return Zanimo(start(redCube))
 
         <script src="app.js"></script>
 
-    <!-- <script type="text/javascript">
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-35740178-1']);
-          _gaq.push(['_setDomainName', 'zanimo.us']);
-          _gaq.push(['_trackPageview']);
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        }) ();
-    </script>-->
+        <script type="text/javascript">
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-35740178-1']);
+              _gaq.push(['_setDomainName', 'zanimo.us']);
+              _gaq.push(['_trackPageview']);
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            }) ();
+        </script>
     </body>
 </html>
