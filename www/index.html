@@ -117,11 +117,15 @@
 
 <script id="empty-script-help" type="text/tmpl">/*
  * Zanimo example script
+ *
  * You are in the body of a function
  * with 2 arguments:
+ *
  * - create: DOM element generator
  * - start: starts the animation
- * and you need to return a promise.
+ *
+ * You need to return a promise.
+ *
  * Q is also available.
  */
 
@@ -156,6 +160,7 @@ return Zanimo(start(redCube))
     .then(Zanimo.f(greenCube))
     .then(show)
     .then(anim);
+
 </script>
 
         <script src="vendor/codemirror/codemirror.js"></script>
