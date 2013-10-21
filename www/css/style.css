@@ -68,7 +68,7 @@ a:hover {
   margin: auto;
 }
 .documentation section.content div.doc-content p {
-  color: #354757;
+  color: #56738d;
   font-weight: bold;
   font-size: 20px;
   margin: 15px 10px 10px 10px;
@@ -76,6 +76,10 @@ a:hover {
   text-shadow: 1px 1px 2px #d1d1d1;
   border-bottom: 1px solid rgba(118,189,255,0.45);
   padding: 10px 5px;
+}
+.documentation section.content div.doc-content p.api-code {
+  color: #354757;
+  border-bottom: none;
 }
 .documentation section.content div.doc-content h2 {
   color: #354757;

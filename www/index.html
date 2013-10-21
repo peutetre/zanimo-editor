@@ -46,63 +46,59 @@
             <section class="content">
                 <div class="doc-content">
                     <h2>API CHEAT SHEET</h2>
-
-                    <p>Zanimo(elt | promise[elt])
+                    <p class='api-code'>Zanimo(elt | promise[elt])
                         <br> ➜  promise[elt]
-                        <br><br>
+                    </p>
+                    <p>
                         Takes a dom element or a promise of a dom element and returns a promise of it.
                     </p>
-
-                    <p>Zanimo.transition(
+                    <p class='api-code'>Zanimo.transition(
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;elt,
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;property,
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;value,
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;duration,
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;[timingƒ]
                         <br>)  ➜  promise[elt]
-                        <br><br>
+                    </p>
+                    <p>
                         Start a CSS `property` transition with value `value` on the dom element `elt` with a duration of `duration` ms and an optional timing function `timingƒ`.
                     </p>
-
-                    <p>Zanimo.transitionf(
+                    <p class='api-code'>Zanimo.transitionf(
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;property,
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;value,
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;duration,
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;[timingƒ]
                         <br>)  ➜  (elt) ➜  promise[elt]
-                        <br><br>
+                    </p>
+                    <p>
                         Wrap `Zanimo.transition` into a function; useful in a chain of promises.
                     </p>
-
-                    <p>Zanimo.transform(
+                    <p class='api-code'>Zanimo.transform(
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;elt,
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;value,
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;[overwrite]
                         <br>)  ➜  promise[elt]
-                        <br><br>
+                    </p>
+                    <p>
                         Set CSS transform property of dom element `elt` to `value` and return a promise of the dom element. Boolean argument `overwrite` allows to overwrite present transform property, defaults append.
                     </p>
-
-                    <p>Zanimo.transformf(
+                    <p class='api-code'>Zanimo.transformf(
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;value,
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;[overwrite]
                         <br>)  ➜  (elt) ➜  promise[elt]
-                        <br><br>
-                        Wrap `Zanimo.transform` into a function; useful in a chain of promises.
                     </p>
-
-                    <p>Zanimo.all(
+                    <p>Wrap `Zanimo.transform` into a function; useful in a chain of promises.</p>
+                    <p class='api-code'>Zanimo.all(
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;array[ (elt) ➜  promise[elt] ]
                         <br>)  ➜  (elt) ➜  promise[elt]
-                        <br><br>
-                        Allows running multiples transitions on the same dom element at the same time.
                     </p>
-
-                    <p>Zanimo.f(elt | promise[elt])
+                    <p>
+                    Allows running multiples transitions on the same dom element at the same time.
+                    </p>
+                    <p class='api-code'>Zanimo.f(elt | promise[elt])
                         <br>➜  (elt) ➜  promise[elt]
-                        <br><br>
-                        Wrap `Zanimo()` into a function; useful in a chain of promises;
                     </p>
+                    <p>Wrap `Zanimo()` into a function; useful in a chain of promises;</p>
                 </div>
             </section>
             <div class="active-area">
