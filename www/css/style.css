@@ -2,12 +2,6 @@
  * style.styl
  */
 @font-face {
-  font-family: 'Molle';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Molle'), local('Molle-Regular'), url("fonts/molle.woff") format('woff');
-}
-@font-face {
   font-family: 'Anaheim';
   font-style: normal;
   font-weight: 400;
