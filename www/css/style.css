@@ -370,6 +370,8 @@ textarea {
   font-size: 16px;
   color: #444;
   padding: 10px;
+  overflow: scroll;
+  height: 43px;
 }
 .prompt span {
   -webkit-appearance: none;
