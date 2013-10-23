@@ -1,6 +1,6 @@
 CACHE MANIFEST
-# 142
-/index.html
+# 518
+/
 /css/reset.css
 /vendor/codemirror/codemirror.css
 /css/style.css
@@ -14,7 +14,6 @@ CACHE MANIFEST
 /vendor/font-awesome/font/fontawesome-webfont.woff?v=3.0.1
 /css/fonts/roboto.woff
 /css/fonts/anaheim.woff
-/css/fonts/molle.woff
 
 NETWORK:
 *
