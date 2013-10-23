@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 524
+# 529
 /
 /css/reset.css
 /vendor/codemirror/codemirror.css
@@ -11,6 +11,7 @@ CACHE MANIFEST
 /vendor/codemirror/continuecomment.js
 /app.js
 /images/arrow@2x.png
+/images/demo.gif
 /vendor/font-awesome/font/fontawesome-webfont.woff?v=3.0.1
 /css/fonts/roboto.woff
 /css/fonts/anaheim.woff

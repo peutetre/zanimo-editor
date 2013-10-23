@@ -334,6 +334,9 @@ textarea {
   padding: 0;
   margin: 0;
 }
+.alert div.tutorial img {
+  width: 300px;
+}
 .alert i {
   position: absolute;
   bottom: 40px;
