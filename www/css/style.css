@@ -35,13 +35,13 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: 999;
-  background: #f0f1f3;
+  background: #fafafa;
   display: none;
   opacity: 0;
 }
 .documentation {
   z-index: 1;
-  background: #f0f1f3;
+  background: #fafafa;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -63,15 +63,19 @@ a:hover {
 }
 .documentation section.content div.doc-content p {
   color: #56738d;
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 26px;
   margin: 15px 10px 10px 10px;
   font-family: Anaheim, sans-serif;
   text-shadow: 1px 1px 2px #d1d1d1;
-  border-bottom: 1px solid rgba(118,189,255,0.45);
+  border-bottom: 1px solid rgba(90,120,148,0.25);
   padding: 10px 5px;
 }
-.documentation section.content div.doc-content p.api-code,
+.documentation section.content div.doc-content p.api-code {
+  color: #354757;
+  border-bottom: none;
+  font-weight: bold;
+  font-size: 20px;
+}
 .documentation section.content div.doc-content p.shortcuts {
   color: #354757;
   border-bottom: none;
@@ -171,14 +175,14 @@ a:hover {
   position: absolute;
   top: 30px;
   width: 100%;
-  color: #f00;
+  background-color: #fafafa;
   line-height: 50px;
   padding: 0 0 0 0px;
 }
 .editor div.toolbar .button {
   -webkit-appearance: none;
   border: none;
-  background: #f3f3f3;
+  background: #fafafa;
   height: 26px;
   width: 26px;
   border-radius: 0;
@@ -218,9 +222,8 @@ a:hover {
   padding: 0;
   overflow: hidden;
   z-index: 1;
-  border: 1px solid #dadada;
-  border-radius: 4px 4px 4px 4px;
-  background-color: #f3f3f3;
+  background-color: #fafafa;
+  border-bottom: 1px solid #dadada;
 }
 .editor div.toolbar .select-container .select {
   width: 140px;
@@ -247,7 +250,7 @@ a:hover {
   border-top: 1px solid #dadada;
   background: #fdfdfd;
   font-family: monospace;
-  font-size: 17px;
+  font-size: 15px;
 }
 .editor .CodeMirror .CodeMirror-gutters {
   border-right: 1px solid #ececec;
@@ -305,6 +308,7 @@ textarea {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   color: #444;
+  background: #fafafa;
 }
 .alert span {
   -webkit-appearance: none;
@@ -367,6 +371,7 @@ textarea {
   padding: 0 5px 0 10px;
   color: #585858;
   margin: 0;
+  background: #fafafa;
 }
 .prompt div {
   font-family: 'Roboto', sans-serif;
@@ -375,6 +380,7 @@ textarea {
   padding: 10px;
   overflow: scroll;
   height: 43px;
+  background: #fafafa;
 }
 .prompt span {
   -webkit-appearance: none;

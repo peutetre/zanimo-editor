@@ -48,13 +48,13 @@ a:hover
     width 100%
     height 100%
     z-index 999
-    background niceGray
+    background: rgb(250, 250, 250);
     display none
     opacity 0
 
 .documentation
     z-index 1
-    background niceGray
+    background rgb(250,250,250);
     height 100%
     width 100%
     position absolute
@@ -73,15 +73,19 @@ a:hover
             max-width 1280px
             margin auto
             p
-                color: anotherGray;
-                font-weight: bold;
-                font-size: 20px;
+                color: rgb(86, 115, 141);
+                font-size: 26px;
                 margin:15px 10px 10px 10px;
                 font-family Anaheim, sans-serif;
                 text-shadow: 1px 1px 2px lightGray;
-                border-bottom: 1px solid rgba(118, 189, 255, 0.45)
+                border-bottom: 1px solid rgba(90, 120, 148, 0.25)
                 padding 10px 5px
-            p.api-code, p.shortcuts
+            p.api-code
+                color darkGray
+                border-bottom none
+                font-weight: bold;
+                font-size: 20px;
+            p.shortcuts
                 color darkGray
                 border-bottom none
             h2
@@ -168,13 +172,13 @@ a:hover
         position absolute
         top 30px
         width 100%
-        color red
+        background-color rgb(250,250,250)
         line-height: 50px;
         padding: 0 0 0 0px;
         .button
             -webkit-appearance: none;
             border: none;
-            background: rgb(243, 243, 243);
+            background: rgb(250,250,250);
             height: 26px;
             width: 26px;
             border-radius: 0;
@@ -209,9 +213,8 @@ a:hover
             padding 0
             overflow hidden
             z-index: 1;
-            border: 1px solid #dadada;
-            border-radius: 4px 4px 4px 4px;
-            background-color: #f3f3f3;
+            background-color: rgb(250,250,250);
+            border-bottom: 1px solid rgb(218, 218, 218);
             .select
                 width: 140px;
                 font-size: 14px;
@@ -294,6 +297,7 @@ textarea
         font-family: 'Roboto', sans-serif;
         font-size: 18px;
         color: rgb(68, 68, 68);
+        background: rgb(250, 250, 250);
     span
         -webkit-appearance: none;
         font-weight: bold;
@@ -349,6 +353,7 @@ textarea
         padding: 0 5px 0 10px;
         color: rgb(88, 88, 88);
         margin: 0;
+        background: rgb(250, 250, 250);
     div
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
@@ -356,6 +361,7 @@ textarea
         padding 10px
         overflow:scroll;
         height:43px
+        background: rgb(250, 250, 250);
     span
         -webkit-appearance: none;
         font-weight: bold;
