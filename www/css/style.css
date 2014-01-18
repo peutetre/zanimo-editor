@@ -300,7 +300,7 @@ textarea {
   text-align: left;
   padding: 10px;
   overflow: scroll;
-  height: -webkit-calc(3%);
+  height: -webkit-calc(100% - 97px);
   height: -webkit-calc(100% - 97px);
   height: -moz-calc(100% - 97px);
   height: -ms-calc(100% - 97px);
