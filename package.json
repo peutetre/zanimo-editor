@@ -24,7 +24,8 @@
     "cookie": "0.1.0",
     "qajax": "0.2.2",
     "qimage": "1.1.1",
-    "image2base64": "0.0.2"
+    "image2base64": "0.0.2",
+    "mobile-button": "0.1.x"
   },
   "devDependencies": {
     "browserify": "3.20.x",

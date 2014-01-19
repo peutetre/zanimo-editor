@@ -202,6 +202,8 @@ a:hover
                 left: 0;
                 border: 1px solid #dadada;
                 box-sizing border-box
+        .button.active
+            color:hsl(209, 66%, 64%);
         .select-container
             background: url(../images/arrow@2x.png) 90% 5px no-repeat;
             color niceBlue
@@ -313,7 +315,9 @@ textarea
         font-family: Anaheim, sans-serif;
         line-height: 30px;
         border-top: 1px solid rgb(117, 172, 223);
-    span:hover
+    span
+        cursor pointer;
+    span.active
         cursor pointer;
         background: rgb(117, 172, 223);
         color white;
@@ -382,7 +386,8 @@ textarea
         border-right: 1px solid rgb(117, 172, 223);
     span.ok
         left: 50%;
-    span:hover
+    span
         cursor pointer;
+    span.active
         background: rgb(117, 172, 223);
         color white;

@@ -211,6 +211,9 @@ a:hover {
   border: 1px solid #dadada;
   box-sizing: border-box;
 }
+.editor div.toolbar .button.active {
+  color: #67a5e0;
+}
 .editor div.toolbar .select-container {
   background: url("../images/arrow@2x.png") 90% 5px no-repeat;
   color: #76bdff;
@@ -326,7 +329,10 @@ textarea {
   line-height: 30px;
   border-top: 1px solid #75acdf;
 }
-.alert span:hover {
+.alert span {
+  cursor: pointer;
+}
+.alert span.active {
   cursor: pointer;
   background: #75acdf;
   color: #fff;
@@ -404,8 +410,10 @@ textarea {
 .prompt span.ok {
   left: 50%;
 }
-.prompt span:hover {
+.prompt span {
   cursor: pointer;
+}
+.prompt span.active {
   background: #75acdf;
   color: #fff;
 }
