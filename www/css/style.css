@@ -70,6 +70,12 @@ a:hover {
   border-bottom: 1px solid rgba(90,120,148,0.25);
   padding: 10px 5px;
 }
+.documentation section.content div.doc-content p strong {
+  font-weight: bold;
+}
+.documentation section.content div.doc-content p.clean {
+  border-bottom: none;
+}
 .documentation section.content div.doc-content p.api-code {
   color: #354757;
   border-bottom: none;
@@ -417,4 +423,3 @@ textarea {
   background: #75acdf;
   color: #fff;
 }
-
