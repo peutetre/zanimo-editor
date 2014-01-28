@@ -11,7 +11,7 @@
   "scripts": {
     "build": "npm run css; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js --debug",
     "prod": "npm run css; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js",
-    "css": "cat ./styl/style.styl | ./node_modules/stylus/bin/stylus  >! ./www/css/style.css",
+    "css": "rm -f ./www/css/style.css; cat ./styl/style.styl | ./node_modules/stylus/bin/stylus > ./www/css/style.css",
     "colony": "colony ./lib/app.js -o colony -r ./README.md -s 4"
   },
   "dependencies": {
