@@ -62,15 +62,11 @@ a:hover {
   margin: auto;
 }
 .documentation section.content div.doc-content dl {
-  font-size: 26px;
+  font-size: 20px;
   font-family: Anaheim, sans-serif;
   margin: 0 10px;
 }
-.documentation section.content div.doc-content dl dt {
-  font-size: 26px;
-}
 .documentation section.content div.doc-content dl dd {
-  font-size: 26px;
   margin: 0 0 0 20px;
 }
 .documentation section.content div.doc-content p {
