@@ -45,13 +45,27 @@
         <article class="documentation">
             <section class="content">
                 <div class="doc-content">
-                    <p class='shortcuts'>CREATE, STORE AND SHARE ZANIMO ANIMATIONS</p>
+                    <h1>CREATE, STORE AND SHARE ANIMATIONS</h1>
                     <p class='clean'><strong>Zanimo.js</strong> allows chaining of css transitions in a promise based way, which gives a powerful control over CSS transitions for making animations.</p>
-                    <p>With <strong>Zanimo editor</strong>, you can create, run, share and store animations.</p>
+                    <h2>EDITOR HELP</h2>
+                    <p class='normal'>A script is the body of a function with the following arguments:</p>
+                    <dl>
+                        <dt>Q</dt>
+                        <dd>the Q library</dd>
+                        <dt>Zanimo</dt>
+                        <dd>the Zanimo library</dd>
+                        <dt>create</dt>
+                        <dd>helper for creating dom elements</dd>
+                        <dt>width</dt>
+                        <dd>the width of the viewport in pixel</dd>
+                        <dt>height</dt>
+                        <dd>the height of the viewport in pixel</dd>
+                    </dl>
+                    <p class='normal'>the function must return a promise.</p>
                     <h2>EDITOR SHORTCUTS</h2>
-                    <p class='shortcuts'>⌘+S: Save current script</p>
-                    <p class='shortcuts'>⌘+E: Run current script</p>
-                    <h2>ZANIMO API CHEAT SHEET</h2>
+                    <p class='normal'>⌘+S: Save current script</p>
+                    <p class='normal'>⌘+E: Run current script</p>
+                    <h2>ZANIMO CHEAT SHEET</h2>
 
                     <p class='api-code'>Zanimo(el | promise[el])
                         <br> ➜  promise[el]
