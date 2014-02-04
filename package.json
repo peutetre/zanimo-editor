@@ -9,10 +9,13 @@
     "url": "https://github.com/peutetre/zanimo-editor.git"
   },
   "scripts": {
-    "build": "npm run css; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js --debug",
-    "prod": "npm run css; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js",
+    "preprocess-ios": "node -e \"require('preprocess').preprocessFileSync('./www/index.tmpl', './www/index.html', {ZANIMO_ENV:'cordova'})\"",
+    "preprocess-web": "node -e \"require('preprocess').preprocessFileSync('./www/index.tmpl', './www/index.html', {ZANIMO_ENV:'web'})\"",
     "css": "rm -f ./www/css/style.css; cat ./styl/style.styl | ./node_modules/stylus/bin/stylus > ./www/css/style.css",
-    "colony": "colony ./lib/app.js -o colony -r ./README.md -s 4"
+    "build": "npm run css; npm run preprocess-web; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js --debug",
+    "prod": "npm run css; npm run preprocess-web; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js",
+    "colony": "colony ./lib/app.js -o colony -r ./README.md -s 4",
+    "ios": "npm run css; npm run preprocess-ios; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js; cd app; cordova prepare ios; cd .."
   },
   "dependencies": {
     "q": "1.0.0",
@@ -28,6 +31,7 @@
   },
   "devDependencies": {
     "browserify": "3.20.x",
-    "stylus": "0.42.0"
+    "stylus": "0.42.0",
+    "preprocess": "~2.0.0"
   }
 }
