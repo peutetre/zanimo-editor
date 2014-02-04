@@ -1,13 +1,15 @@
 # the `Zanimo.js` online editor
 
-## Setup
+See http://zanimo.us
+
+## Install & setup
 
 ```
-npm install
+npm install; npm run build
 ```
 
-## Build
+then serve the www folder
 
-```
-npm run build
-```
+## License
+
+MIT
