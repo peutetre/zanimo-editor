@@ -11,11 +11,15 @@
   "scripts": {
     "preprocess-ios": "node -e \"require('preprocess').preprocessFileSync('./www/index.tmpl', './www/index.html', {ZANIMO_ENV:'cordova'})\"",
     "preprocess-web": "node -e \"require('preprocess').preprocessFileSync('./www/index.tmpl', './www/index.html', {ZANIMO_ENV:'web'})\"",
+    "target-dev": "node -e \"require('preprocess').preprocessFileSync('./env/index.tmpl', './env/index.js', {TARGET:'dev'})\"",
+    "target-staging": "node -e \"require('preprocess').preprocessFileSync('./env/index.tmpl', './env/index.js', {TARGET:'staging'})\"",
+    "target-prod": "node -e \"require('preprocess').preprocessFileSync('./env/index.tmpl', './env/index.js', {TARGET:'prod'})\"",
+    "target-ios": "node -e \"require('preprocess').preprocessFileSync('./env/index.tmpl', './env/index.js', {TARGET:'cordova'})\"",
     "css": "rm -f ./www/css/style.css; cat ./styl/style.styl | ./node_modules/stylus/bin/stylus > ./www/css/style.css",
-    "build": "npm run css; npm run preprocess-web; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js --debug",
-    "prod": "npm run css; npm run preprocess-web; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js",
-    "colony": "colony ./lib/app.js -o colony -r ./README.md -s 4",
-    "ios": "npm run css; npm run preprocess-ios; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js; cd app; cordova prepare ios; cd .."
+    "dev": "npm run target-dev; npm run css; npm run preprocess-web; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js --debug",
+    "prod": "npm run target-prod; npm run css; npm run preprocess-web; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js",
+    "staging": "npm run target-staging; npm run css; npm run preprocess-web; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js",
+    "ios": "npm run target-ios; npm run css; npm run preprocess-ios; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js; cd app; cordova prepare ios; cd .."
   },
   "dependencies": {
     "q": "1.0.0",

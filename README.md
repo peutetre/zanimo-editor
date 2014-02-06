@@ -5,10 +5,12 @@ See http://zanimo.us
 ## Install & setup
 
 ```
-npm install; npm run build
+npm install
 ```
 
-then serve the www folder
+```
+npm run dev|staging|prod|ios
+```
 
 ## License
 
