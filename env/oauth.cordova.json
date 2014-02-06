@@ -1,0 +1,6 @@
+{
+  "api": "https://api.github.com",
+  "site": "https://github.com",
+  "clientId": "8246dbce64b5946c89a6",
+  "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org"
+}
