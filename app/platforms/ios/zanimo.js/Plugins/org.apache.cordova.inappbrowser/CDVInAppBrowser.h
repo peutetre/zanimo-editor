@@ -33,6 +33,7 @@
 
 - (void)open:(CDVInvokedUrlCommand*)command;
 - (void)close:(CDVInvokedUrlCommand*)command;
+- (void)clear:(CDVInvokedUrlCommand*)command;
 - (void)injectScriptCode:(CDVInvokedUrlCommand*)command;
 - (void)show:(CDVInvokedUrlCommand*)command;
 

@@ -46,10 +46,18 @@
 {
     self = [super initWithWebView:theWebView];
     if (self != nil) {
-        // your initialization here
+        [self clear:nil];
     }
 
     return self;
+}
+
+- (void)clear:(CDVInvokedUrlCommand*)command
+{
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    for(NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
+    }
 }
 
 - (void)onReset

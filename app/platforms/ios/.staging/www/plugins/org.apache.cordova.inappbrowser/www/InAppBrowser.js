@@ -46,6 +46,9 @@ InAppBrowser.prototype = {
             exec(null, null, "InAppBrowser", "close", []);
         }
     },
+    clear: function (eventname) {
+        exec(null, null, "InAppBrowser", "clear", []);
+    },
     show: function (eventname) {
       exec(null, null, "InAppBrowser", "show", []);
     },
