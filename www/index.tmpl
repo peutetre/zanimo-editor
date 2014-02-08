@@ -137,12 +137,15 @@
     <br><i>Made with ♥  by <a href="#" onclick='window.open("http://twitter.com/42loops", "_system");'>@42loops</a> between Paris &amp; Berlin</i>
 </script>
 
+        <!-- @if ZANIMO_ENV='web' -->
         <script src="vendor/codemirror/codemirror.js"></script>
         <script src="vendor/codemirror/matchbrackets.js"></script>
         <script src="vendor/codemirror/continuecomment.js"></script>
         <script src="vendor/codemirror/javascript.js"></script>
+        <!-- @endif -->
 
         <script src="app.js"></script>
+
         <!-- @if ZANIMO_ENV='web' -->
         <script type="text/javascript">
               var _gaq = _gaq || [];
