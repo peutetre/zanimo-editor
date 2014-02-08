@@ -6,8 +6,14 @@
     </description>
     <preference name="DisallowOverscroll" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
+    <feature name="SocialMessage">
+        <param name="ios-package" value="SocialMessage" />
+    </feature>
     <name>zanimo.js</name>
     <description>
        The Zanimo.js editor
@@ -55,8 +61,5 @@
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
         <param name="ios-package" onload="true" value="CDVLogger" />
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="ios-package" value="CDVInAppBrowser" />
     </feature>
 </widget>

@@ -56,6 +56,13 @@ module.exports = [
         "clobbers": [
             "window.open"
         ]
+    },
+    {
+        "file": "plugins/socialmessage/www/socialmessage.js",
+        "id": "socialmessage.SocialMessage",
+        "clobbers": [
+            "socialmessage"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -66,7 +73,8 @@ module.exports.metadata =
     "org.apache.cordova.device": "0.2.7",
     "org.apache.cordova.splashscreen": "0.2.6",
     "org.apache.cordova.statusbar": "0.1.3",
-    "org.apache.cordova.inappbrowser": "0.3.0"
+    "org.apache.cordova.inappbrowser": "0.3.0",
+    "socialmessage": "0.2.3"
 }
 // BOTTOM OF METADATA
 });
