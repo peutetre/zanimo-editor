@@ -6,6 +6,9 @@
     </description>
     <preference name="DisallowOverscroll" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <feature name="TestFlightSDK">
+        <param name="ios-package" value="CDVTestFlight" />
+    </feature>
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
     </feature>

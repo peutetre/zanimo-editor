@@ -63,6 +63,13 @@ module.exports = [
         "clobbers": [
             "socialmessage"
         ]
+    },
+    {
+        "file": "plugins/com.testflightapp.cordova-plugin/www/testflight.js",
+        "id": "com.testflightapp.cordova-plugin.TestFlight",
+        "clobbers": [
+            "TestFlight"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -74,7 +81,8 @@ module.exports.metadata =
     "org.apache.cordova.splashscreen": "0.2.6",
     "org.apache.cordova.statusbar": "0.1.3",
     "org.apache.cordova.inappbrowser": "0.3.0",
-    "socialmessage": "0.2.3"
+    "socialmessage": "0.2.3",
+    "com.testflightapp.cordova-plugin": "2.0.0"
 }
 // BOTTOM OF METADATA
 });
