@@ -13,6 +13,19 @@
   font-weight: 400;
   src: local('Roboto Regular'), local('Roboto-Regular'), url("fonts/roboto.woff") format('woff');
 }
+* {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input,
+textarea {
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
 body,
 html {
   background: #808080;
