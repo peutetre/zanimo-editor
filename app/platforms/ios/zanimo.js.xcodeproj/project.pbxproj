@@ -51,6 +51,7 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		E1B2647B089F41D3A3665796 /* libTestFlight.a in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE2EE966324B2990E01044 /* libTestFlight.a */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
+		A06B734738B64B9A91773213 /* CDVKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = A2043444BCB84587B196BAF6 /* CDVKeyboard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,8 @@
 		F1174894E7534AE9A7211D1F /* CDVSplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = org.apache.cordova.splashscreen/CDVSplashScreen.h; sourceTree = "<group>"; };
 		F72A7C587AAF44248E2D9B2C /* CDVConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVConnection.h; path = "org.apache.cordova.network-information/CDVConnection.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = zanimo.js/config.xml; sourceTree = "<group>"; };
+		A2043444BCB84587B196BAF6 /* CDVKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVKeyboard.m"; path = "org.apache.cordova.keyboard/CDVKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		A7F69C54B77C47A8821F3557 /* CDVKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVKeyboard.h"; path = "org.apache.cordova.keyboard/CDVKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +272,8 @@
 				3A68FEBA80E94504A00BCF0B /* TestFlight+AsyncLogging.h */,
 				B205B163BC2A4DE6B18C4730 /* TestFlight+ManualSessions.h */,
 				D4315586403142678DDEF205 /* CDVTestFlight.h */,
+				A2043444BCB84587B196BAF6 /* CDVKeyboard.m */,
+				A7F69C54B77C47A8821F3557 /* CDVKeyboard.h */,
 			);
 			name = Plugins;
 			path = zanimo.js/Plugins;
@@ -452,6 +457,7 @@
 				B536FBEDFF214EC090D9AE71 /* SocialMessage.m in Sources */,
 				C311D82EAC1A46C9ACCFD1E6 /* CDVTestFlight.m in Sources */,
 				E1B2647B089F41D3A3665796 /* libTestFlight.a in Sources */,
+				A06B734738B64B9A91773213 /* CDVKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

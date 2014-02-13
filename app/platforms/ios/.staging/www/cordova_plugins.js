@@ -70,6 +70,13 @@ module.exports = [
         "clobbers": [
             "TestFlight"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.keyboard/www/keyboard.js",
+        "id": "org.apache.cordova.keyboard.keyboard",
+        "clobbers": [
+            "window.Keyboard"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -82,7 +89,8 @@ module.exports.metadata =
     "org.apache.cordova.statusbar": "0.1.3",
     "org.apache.cordova.inappbrowser": "0.3.0",
     "socialmessage": "0.2.3",
-    "com.testflightapp.cordova-plugin": "2.0.0"
+    "com.testflightapp.cordova-plugin": "2.0.0",
+    "org.apache.cordova.keyboard": "0.1.2"
 }
 // BOTTOM OF METADATA
 });
