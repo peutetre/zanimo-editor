@@ -24,6 +24,8 @@
     <preference name="StatusBarBackgroundColor" value="#76BDFF"/>
     <preference name="ShowSplashScreenSpinner" value="false"/>
     <preference name="AutoHideSplashScreen" value="false"/>
+    <preference name="HideKeyboardFormAccessoryBar" value="false"/>
+    <preference name="KeyboardShrinksView" value="false"/>
     <content src="index.html" />
     <access origin="*" />
 
