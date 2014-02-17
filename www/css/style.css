@@ -221,19 +221,20 @@ a:hover {
   -webkit-appearance: none;
   border: none;
   background: #fafafa;
-  height: 26px;
-  width: 26px;
+  height: 50px;
+  width: 35px;
   border-radius: 0;
   float: left;
   font-size: 21px;
-  margin: 13px 0 0 10px;
+  margin: 0;
   padding: 0;
   color: #76bdff;
   cursor: pointer;
 }
 .editor div.toolbar .button.sign,
 .editor div.toolbar .button.logout {
-  right: 6px;
+  right: 0px;
+  width: 50px;
   position: absolute;
   z-index: 8;
 }
@@ -253,18 +254,17 @@ a:hover {
   color: #67a5e0;
 }
 .editor div.toolbar .select-container {
-  background: url("../images/arrow@2x.png") 90% 5px no-repeat;
+  background: url("../images/arrow@2x.png") 90% 17px no-repeat;
   color: #76bdff;
   background-size: 14px;
-  height: 26px;
+  height: 50px;
   width: 120px;
   float: left;
-  margin: 12px 0 0 10px;
+  margin: 0;
   padding: 0;
   overflow: hidden;
   z-index: 1;
   background-color: #fafafa;
-  border-bottom: 1px solid #dadada;
 }
 .editor div.toolbar .select-container .select {
   width: 140px;
