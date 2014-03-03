@@ -245,8 +245,8 @@ a:hover {
   width: 26px;
   height: 26px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 13px;
+  left: 13px;
   border: 1px solid #dadada;
   box-sizing: border-box;
 }
