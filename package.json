@@ -33,7 +33,7 @@
     "qimage": "1.1.1",
     "image2base64": "0.0.2",
     "mobile-button": "0.1.2",
-    "qanimationframe": "2.1.1"
+    "qanimationframe": "2.1.2"
   },
   "devDependencies": {
     "browserify": "3.20.x",
