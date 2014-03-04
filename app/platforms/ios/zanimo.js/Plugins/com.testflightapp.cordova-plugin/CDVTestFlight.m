@@ -141,30 +141,6 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
-- (void) setDeviceIdentifier:(CDVInvokedUrlCommand*)command
-{
-    NSArray* arguments = command.arguments;
-    CDVPluginResult* pluginResult = nil;
-    
-    if ([arguments count] > 0) {
-        NSString* deviceIdentifier = [arguments objectAtIndex:0];
-        [TestFlight setDeviceIdentifier:deviceIdentifier];
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-        
-    } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"deviceIdentifier string is missing."];
-    }
-    
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-}
-
-- (void) setDeviceIdentifierUUID:(CDVInvokedUrlCommand*)command
-{
-    [TestFlight setDeviceIdentifier:[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
-
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-}
 
 
 - (void) remoteLogAsync:(CDVInvokedUrlCommand*)command
