@@ -32,6 +32,50 @@
 		459EA2C2D5DF4427B98F41E4 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18C03DFE2C4AF0939136B4 /* CDVDevice.m */; };
 		4988F7C9BD7045578ADC00F8 /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A6A306E7684E2BA91D2588 /* CDVConnection.m */; };
 		5420BB5418A80EB700D1175C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5420BB5318A80EB700D1175C /* libz.dylib */; };
+		5424381318C923D300928517 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
+		5424381418C923D300928517 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DA1810823500FA85AD /* icon-76.png */; };
+		5424381518C923D300928517 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D51810823500FA85AD /* icon-40@2x.png */; };
+		5424381618C923D300928517 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052E1370CCF300D202BF /* icon-72.png */; };
+		5424381718C923D300928517 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052F1370CCF300D202BF /* icon.png */; };
+		5424381818C923D300928517 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05301370CCF300D202BF /* icon@2x.png */; };
+		5424381918C923D300928517 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDC13BBADB100FB74C0 /* Localizable.strings */; };
+		5424381A18C923D300928517 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
+		5424381B18C923D300928517 /* icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D61810823500FA85AD /* icon-50.png */; };
+		5424381C18C923D300928517 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D91810823500FA85AD /* icon-60@2x.png */; };
+		5424381D18C923D300928517 /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
+		5424381E18C923D300928517 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBB7154F3926009F9C59 /* Default-Landscape@2x~ipad.png */; };
+		5424381F18C923D300928517 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBB8154F3926009F9C59 /* Default-Landscape~ipad.png */; };
+		5424382018C923D300928517 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBB9154F3926009F9C59 /* Default-Portrait@2x~ipad.png */; };
+		5424382118C923D300928517 /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
+		5424382218C923D300928517 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBA154F3926009F9C59 /* Default-Portrait~ipad.png */; };
+		5424382318C923D300928517 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D41810823500FA85AD /* icon-40.png */; };
+		5424382418C923D300928517 /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBB154F3926009F9C59 /* Default@2x~iphone.png */; };
+		5424382518C923D300928517 /* icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D81810823500FA85AD /* icon-60.png */; };
+		5424382618C923D300928517 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBC154F3926009F9C59 /* Default~iphone.png */; };
+		5424382718C923D300928517 /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		5424382818C923D300928517 /* icon-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D71810823500FA85AD /* icon-50@2x.png */; };
+		5424382918C923D300928517 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DB1810823500FA85AD /* icon-76@2x.png */; };
+		5424382A18C923D300928517 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
+		5424382C18C923D300928517 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		5424382D18C923D300928517 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
+		5424382E18C923D300928517 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
+		5424382F18C923D300928517 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3139AEFA584D2292F92815 /* CDVLogger.m */; };
+		5424383018C923D300928517 /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A6A306E7684E2BA91D2588 /* CDVConnection.m */; };
+		5424383118C923D300928517 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 17896020AEF14D21A67C3458 /* CDVReachability.m */; };
+		5424383218C923D300928517 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18C03DFE2C4AF0939136B4 /* CDVDevice.m */; };
+		5424383318C923D300928517 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FC4D05E7D6402484272B9B /* CDVSplashScreen.m */; };
+		5424383418C923D300928517 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 349BFC5B224149C788754514 /* CDVStatusBar.m */; };
+		5424383518C923D300928517 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 857D9D655B3A49DEBF1645D4 /* CDVInAppBrowser.m */; };
+		5424383618C923D300928517 /* SocialMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9651CEDD6041FBAF75918D /* SocialMessage.m */; };
+		5424383918C923D300928517 /* CDVKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = A2043444BCB84587B196BAF6 /* CDVKeyboard.m */; };
+		5424383B18C923D300928517 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5420BB5318A80EB700D1175C /* libz.dylib */; };
+		5424383C18C923D300928517 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
+		5424383D18C923D300928517 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
+		5424383E18C923D300928517 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		5424383F18C923D300928517 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */; };
+		5424384018C923D300928517 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
+		5424384118C923D300928517 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1A4A66CDE4DB6BCFD0445 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5424384918C9247200928517 /* zanimo.js-prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5424384818C9247200928517 /* zanimo.js-prod.plist */; };
 		5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
 		7804194318BC4E3F9070ABA6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE1A4A66CDE4DB6BCFD0445 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -64,6 +108,13 @@
 			remoteInfo = CordovaLib;
 		};
 		301BF550109A68C00062928A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = CordovaLib;
+		};
+		5424381018C923D300928517 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 			proxyType = 1;
@@ -103,6 +154,8 @@
 		3A68FEBA80E94504A00BCF0B /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TestFlight+AsyncLogging.h"; path = "com.testflightapp.cordova-plugin/TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
 		5244607CD5824EEBA0D6BC92 /* CDVStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVStatusBar.h; path = org.apache.cordova.statusbar/CDVStatusBar.h; sourceTree = "<group>"; };
 		5420BB5318A80EB700D1175C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		5424384618C923D300928517 /* zanimo.js.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zanimo.js.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5424384818C9247200928517 /* zanimo.js-prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "zanimo.js-prod.plist"; path = "../../zanimo.js-prod.plist"; sourceTree = "<group>"; };
 		5AEE5B34173C68D80009041E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		5D9651CEDD6041FBAF75918D /* SocialMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialMessage.m; path = socialmessage/SocialMessage.m; sourceTree = "<group>"; };
@@ -156,6 +209,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5424383A18C923D300928517 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5424383B18C923D300928517 /* libz.dylib in Frameworks */,
+				5424383C18C923D300928517 /* AssetsLibrary.framework in Frameworks */,
+				5424383D18C923D300928517 /* libCordova.a in Frameworks */,
+				5424383E18C923D300928517 /* CoreGraphics.framework in Frameworks */,
+				5424383F18C923D300928517 /* MobileCoreServices.framework in Frameworks */,
+				5424384018C923D300928517 /* CoreLocation.framework in Frameworks */,
+				5424384118C923D300928517 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -176,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* zanimo.js.app */,
+				5424384618C923D300928517 /* zanimo.js.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +289,7 @@
 				308D052D1370CCF300D202BF /* icons */,
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* zanimo.js-Info.plist */,
+				5424384818C9247200928517 /* zanimo.js-prod.plist */,
 			);
 			name = Resources;
 			path = zanimo.js/Resources;
@@ -318,9 +387,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* zanimo.js */ = {
+		1D6058900D05DD3D006BFB54 /* zanimo.js dev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "zanimo.js" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "zanimo.js dev" */;
 			buildPhases = (
 				304B58A110DAC018002A0835 /* Copy www directory */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
@@ -332,9 +401,28 @@
 			dependencies = (
 				301BF551109A68C00062928A /* PBXTargetDependency */,
 			);
-			name = zanimo.js;
+			name = "zanimo.js dev";
 			productName = zanimo.js;
 			productReference = 1D6058910D05DD3D006BFB54 /* zanimo.js.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5424380E18C923D300928517 /* zanimo.js prod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5424384318C923D300928517 /* Build configuration list for PBXNativeTarget "zanimo.js prod" */;
+			buildPhases = (
+				5424381118C923D300928517 /* Copy www directory */,
+				5424381218C923D300928517 /* Resources */,
+				5424382B18C923D300928517 /* Sources */,
+				5424383A18C923D300928517 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5424380F18C923D300928517 /* PBXTargetDependency */,
+			);
+			name = "zanimo.js prod";
+			productName = zanimo.js;
+			productReference = 5424384618C923D300928517 /* zanimo.js.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -346,6 +434,9 @@
 				LastUpgradeCheck = 500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 6V29VKGUKM;
+					};
+					5424380E18C923D300928517 = {
 						DevelopmentTeam = 6V29VKGUKM;
 					};
 				};
@@ -374,7 +465,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* zanimo.js */,
+				1D6058900D05DD3D006BFB54 /* zanimo.js dev */,
+				5424380E18C923D300928517 /* zanimo.js prod */,
 			);
 		};
 /* End PBXProject section */
@@ -421,10 +513,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5424381218C923D300928517 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5424381318C923D300928517 /* config.xml in Resources */,
+				5424381418C923D300928517 /* icon-76.png in Resources */,
+				5424381518C923D300928517 /* icon-40@2x.png in Resources */,
+				5424381618C923D300928517 /* icon-72.png in Resources */,
+				5424381718C923D300928517 /* icon.png in Resources */,
+				5424381818C923D300928517 /* icon@2x.png in Resources */,
+				5424381918C923D300928517 /* Localizable.strings in Resources */,
+				5424381A18C923D300928517 /* MainViewController.xib in Resources */,
+				5424381B18C923D300928517 /* icon-50.png in Resources */,
+				5424381C18C923D300928517 /* icon-60@2x.png in Resources */,
+				5424381D18C923D300928517 /* icon-small.png in Resources */,
+				5424381E18C923D300928517 /* Default-Landscape@2x~ipad.png in Resources */,
+				5424381F18C923D300928517 /* Default-Landscape~ipad.png in Resources */,
+				5424382018C923D300928517 /* Default-Portrait@2x~ipad.png in Resources */,
+				5424384918C9247200928517 /* zanimo.js-prod.plist in Resources */,
+				5424382118C923D300928517 /* icon-small@2x.png in Resources */,
+				5424382218C923D300928517 /* Default-Portrait~ipad.png in Resources */,
+				5424382318C923D300928517 /* icon-40.png in Resources */,
+				5424382418C923D300928517 /* Default@2x~iphone.png in Resources */,
+				5424382518C923D300928517 /* icon-60.png in Resources */,
+				5424382618C923D300928517 /* Default~iphone.png in Resources */,
+				5424382718C923D300928517 /* Default-568h@2x~iphone.png in Resources */,
+				5424382818C923D300928517 /* icon-50@2x.png in Resources */,
+				5424382918C923D300928517 /* icon-76@2x.png in Resources */,
+				5424382A18C923D300928517 /* icon-72@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		304B58A110DAC018002A0835 /* Copy www directory */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy www directory";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cordova/lib/copy-www-build-step.sh";
+		};
+		5424381118C923D300928517 /* Copy www directory */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -462,6 +600,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5424382B18C923D300928517 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5424382C18C923D300928517 /* main.m in Sources */,
+				5424382D18C923D300928517 /* AppDelegate.m in Sources */,
+				5424382E18C923D300928517 /* MainViewController.m in Sources */,
+				5424382F18C923D300928517 /* CDVLogger.m in Sources */,
+				5424383018C923D300928517 /* CDVConnection.m in Sources */,
+				5424383118C923D300928517 /* CDVReachability.m in Sources */,
+				5424383218C923D300928517 /* CDVDevice.m in Sources */,
+				5424383318C923D300928517 /* CDVSplashScreen.m in Sources */,
+				5424383418C923D300928517 /* CDVStatusBar.m in Sources */,
+				5424383518C923D300928517 /* CDVInAppBrowser.m in Sources */,
+				5424383618C923D300928517 /* SocialMessage.m in Sources */,
+				5424383918C923D300928517 /* CDVKeyboard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -469,6 +626,11 @@
 			isa = PBXTargetDependency;
 			name = CordovaLib;
 			targetProxy = 301BF550109A68C00062928A /* PBXContainerItemProxy */;
+		};
+		5424380F18C923D300928517 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CordovaLib;
+			targetProxy = 5424381018C923D300928517 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -536,6 +698,83 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "zanimo.js/zanimo.js-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/peutetre/code/zanimo-editor/app/platforms/ios/TestFlightSDK2.2.1\\ (1)",
+					"\"$(SRCROOT)/zanimo.js/Plugins/com.testflightapp.cordova-plugin\"",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-force_load",
+					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
+					"-ObjC",
+				);
+				PRODUCT_NAME = zanimo.js;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5424384418C923D300928517 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Paul-Andre Panserrieu (FLLBX67378)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "zanimo.js/zanimo.js-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "$(SRCROOT)/zanimo.js-prod.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/peutetre/code/zanimo-editor/app/platforms/ios/TestFlightSDK2.2.1\\ (1)",
+					"\"$(SRCROOT)/zanimo.js/Plugins/com.testflightapp.cordova-plugin\"",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-force_load",
+					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
+					"-ObjC",
+				);
+				PRODUCT_NAME = zanimo.js;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5424384518C923D300928517 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "zanimo.js/zanimo.js-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "$(SRCROOT)/zanimo.js-prod.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -655,11 +894,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "zanimo.js" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "zanimo.js dev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5424384318C923D300928517 /* Build configuration list for PBXNativeTarget "zanimo.js prod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5424384418C923D300928517 /* Debug */,
+				5424384518C923D300928517 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
