@@ -32,7 +32,7 @@
     "qajax": "0.2.2",
     "qimage": "1.1.1",
     "image2base64": "0.0.2",
-    "mobile-button": "0.1.2",
+    "mobile-button": "0.2.0",
     "qanimationframe": "2.1.2"
   },
   "devDependencies": {
