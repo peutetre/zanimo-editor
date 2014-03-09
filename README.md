@@ -9,7 +9,7 @@ npm install
 ```
 
 ```
-npm run dev|staging|prod|ios
+npm run dev|staging|prod|ios-debug|ios
 ```
 
 ## License
