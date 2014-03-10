@@ -17,9 +17,7 @@
                 "<feature name=\"SocialMessage\"><param name=\"ios-package\" value=\"SocialMessage\" /></feature>": 1,
                 "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"CDVKeyboard\" /></feature>": 1
             },
-            "/widget": {
-                "<feature name=\"TestFlightSDK\"><param name=\"ios-package\" value=\"CDVTestFlight\" /></feature>": 1
-            }
+            "/widget": {}
         },
         "framework": {
             "SystemConfiguration.framework": {
@@ -28,9 +26,7 @@
             "CoreGraphics.framework": {
                 "false": 2
             },
-            "libz.dylib": {
-                "false": 1
-            }
+            "libz.dylib": {}
         }
     },
     "installed_plugins": {
@@ -53,9 +49,6 @@
             "PACKAGE_NAME": "com.42loops.zanimo"
         },
         "socialmessage": {
-            "PACKAGE_NAME": "com.42loops.zanimo"
-        },
-        "com.testflightapp.cordova-plugin": {
             "PACKAGE_NAME": "com.42loops.zanimo"
         },
         "org.apache.cordova.keyboard": {

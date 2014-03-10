@@ -14,9 +14,6 @@
     <feature name="SocialMessage">
         <param name="ios-package" value="SocialMessage" />
     </feature>
-    <feature name="TestFlightSDK">
-        <param name="ios-package" value="CDVTestFlight" />
-    </feature>
     <name>zanimo.js</name>
     <description>
        The Zanimo.js editor
