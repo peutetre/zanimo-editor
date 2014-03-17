@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -437,7 +438,6 @@
 				43D3E319933C494DA3370542 /* CDVStatusBar.m in Sources */,
 				2E4C80B3E950489F83C796B7 /* CDVInAppBrowser.m in Sources */,
 				B536FBEDFF214EC090D9AE71 /* SocialMessage.m in Sources */,
-				E1B2647B089F41D3A3665796 /* libTestFlight.a in Sources */,
 				A06B734738B64B9A91773213 /* CDVKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
