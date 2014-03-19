@@ -20,8 +20,8 @@
     "dev": "npm run p-appcache; npm run target-dev; npm run css && npm run p-web; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js --debug",
     "prod": "npm run p-appcache; npm run target-prod; npm run css && npm run p-web; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js",
     "staging": "npm run p-appcache; npm run target-staging; npm run css && npm run p-web; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js",
-    "ios": "npm run target-ios; npm run css; npm run p-ios; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js; cd app; cordova prepare ios; cd ..",
-    "android": "npm run target-ios; npm run css; npm run p-ios; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js; cd app; cordova prepare android; cd .."
+    "ios": "npm run target-ios; npm run css; npm run p-ios; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js; cd app; ../node_modules/cordova/bin/cordova prepare ios; cd ..",
+    "android": "npm run target-ios; npm run css; npm run p-ios; ./node_modules/browserify/bin/cmd.js ./lib/app.js -o ./www/app.js; cd app; ../node_modules/cordova/bin/cordova prepare android; cd .."
   },
   "dependencies": {
     "q": "1.0.0",
@@ -39,6 +39,7 @@
   "devDependencies": {
     "browserify": "3.20.x",
     "stylus": "0.42.0",
-    "preprocess": "~2.0.0"
+    "preprocess": "~2.0.0",
+    "cordova": "3.4.0-0.1.3"
   }
 }
