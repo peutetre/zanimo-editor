@@ -32,6 +32,9 @@
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="HideKeyboardFormAccessoryBar" value="false" />
     <preference name="KeyboardShrinksView" value="true" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="BackgroundColor" value="0xffffffff" />
+    <preference name="KeepRunning" value="true" />
     <content src="index.html" />
     <access origin="*" />
     <feature name="LocalStorage">
