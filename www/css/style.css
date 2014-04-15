@@ -145,7 +145,7 @@ a:hover {
   height: 50px;
   margin: auto;
   top: -20px;
-  border-radius: 40px;
+  border-radius: 10px;
 }
 .documentation div.active-area div.chip-container div.chip,
 .documentation div.active-area div.chip-container div.chip2 {
@@ -209,7 +209,69 @@ a:hover {
   top: 0;
   left: 0;
 }
+.editor .menu-list {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 50px;
+  background: #f00;
+  z-index: 10;
+  overflow: hidden;
+  border-bottom: 1px solid #eeeded;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #76bdff;
+  background-color: #fafafa;
+  font-family: Anaheim, sans-serif;
+}
+.editor .menu-list div.wrapper {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.editor .menu-list ul.scroller {
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.editor .menu-list li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  padding: 0 0 0 20px;
+  line-height: 30px;
+  font-size: 20px;
+}
+.editor .menu-list li.section {
+  padding: 0 0 0 10px;
+  color: #51a2ee;
+  font-weight: bold;
+  cursor: default;
+}
+.editor .menu-list li.active {
+  color: #51a2ee;
+}
 .editor div.toolbar {
+  z-index: 11;
   -webkit-user-select: none;
   height: 50px;
   position: absolute;
@@ -218,6 +280,11 @@ a:hover {
   background-color: #fafafa;
   line-height: 50px;
   padding: 0 0 0 0px;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dadada;
 }
 .editor div.toolbar .button {
   -webkit-appearance: none;
@@ -232,6 +299,7 @@ a:hover {
   padding: 0;
   color: #76bdff;
   cursor: pointer;
+  border-bottom: 1px solid #dadada;
 }
 .editor div.toolbar .button.sign,
 .editor div.toolbar .button.logout {
@@ -254,6 +322,34 @@ a:hover {
 }
 .editor div.toolbar .button.active {
   color: #67a5e0;
+}
+.editor div.toolbar .menu {
+  background: url("../images/arrow@2x.png") 90% 17px no-repeat;
+  color: #76bdff;
+  background-size: 14px;
+  height: 50px;
+  width: 120px;
+  float: left;
+  margin: 0;
+  padding: 0 0 0 10px;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  background-color: #fafafa;
+  font-family: Anaheim, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #dadada;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.editor div.toolbar .menu.active {
+  color: #51a2ee;
+  background: url("../images/arrow-active@2x.png") 90% 17px no-repeat;
+  background-color: #fafafa;
+  background-size: 14px;
 }
 .editor div.toolbar .select-container {
   background: url("../images/arrow@2x.png") 90% 17px no-repeat;
@@ -290,7 +386,6 @@ a:hover {
   height: -moz-calc(100% - 80px);
   height: -ms-calc(100% - 80px);
   height: calc(100% - 80px);
-  border-top: 1px solid #dadada;
   background: #fdfdfd;
   font-family: monospace;
   font-size: 15px;
@@ -312,7 +407,6 @@ textarea {
   height: -ms-calc(100% - 80px);
   height: calc(100% - 80px);
   border: none;
-  border-top: 1px solid #dadada;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   -webkit-box-sizing: border-box;
@@ -410,6 +504,9 @@ textarea {
   border-bottom: 1px solid #75acdf;
 }
 .prompt input {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
   height: 40px;
@@ -418,6 +515,7 @@ textarea {
   color: #585858;
   margin: 0;
   background: #fafafa;
+  width: 100%;
 }
 .prompt div {
   font-family: 'Roboto', sans-serif;

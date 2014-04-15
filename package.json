@@ -34,7 +34,8 @@
     "qimage": "1.1.1",
     "image2base64": "0.0.2",
     "mobile-button": "0.2.0",
-    "qanimationframe": "2.1.2"
+    "qanimationframe": "2.1.2",
+    "iscroll": "~5.1.1"
   },
   "devDependencies": {
     "browserify": "3.20.x",
