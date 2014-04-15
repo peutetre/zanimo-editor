@@ -25,3 +25,5 @@
 /app/platforms/android/assets/www/**
 
 !.gitkeep
+
+/app/config.xml
