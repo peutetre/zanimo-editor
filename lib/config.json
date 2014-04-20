@@ -1,0 +1,4 @@
+{
+    IOS_CUSTOM_URL_SCHEME: "com.42loops.zanimo://zanimo.us/?gist=%i",
+    ANDROID_INTENT: "intent://zanimo.us/?gist=%i/#Intent;scheme=http;package=com.fortytwoloops.zanimo;end"
+}
