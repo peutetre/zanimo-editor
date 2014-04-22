@@ -373,7 +373,7 @@ cat = function cat(t) {
           -(1/19) * cos(30*t);
 
   return [
-    floor(x/3), -floor(y/3)
+    floor(x/4), -floor(y/4)
   ];
 },
 
@@ -399,16 +399,10 @@ pointConfig = {
 
 points = [ ],
 
-circle = function (t) {
-  return [
-    floor(400*cos(t)),
-    - floor(400*sin(t))
-  ];
-},
 cir = function (t) {
   return [
-    floor(200*cos(t)),
-    - floor(200*sin(t))
+    floor(100*cos(t)),
+    - floor(100*sin(t))
   ];
 },
 animate = function (el, w, z) {
@@ -450,20 +444,11 @@ for(var i=0; i<n; i++) {
 
 points = create(points);
 
-return apply(circle, points, 0,2*PI)
-  .then(applyf(cir, points, 0,2*PI))
+return apply(cir, points, 0,2*PI)
   .then(applyf(cat, points, 0,2*PI))
   .then(applyf(cir, points, 0,2*PI))
   .then(applyf(cat, points, 0,2*PI))
-  .then(applyf(cir, points, 0,2*PI))
-  .then(applyf(cir, points, 0,2*PI))
-  .then(applyf(cat, points, 0,2*PI))
-  .then(applyf(cir, points, 0,2*PI))
-  .then(applyf(cat, points, 0,2*PI))
-  .then(applyf(cir, points, 0,2*PI))
-  .then(applyf(cat, points, 0,2*PI))
-  .then(applyf(cir, points, 0,2*PI))
-  .delay(200);
+  .delay(2000);
 </script>
 
 <script id="empty-script-code" type="text/tmpl">
