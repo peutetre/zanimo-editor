@@ -1,7 +1,7 @@
 {
   "name": "zanimo-editor",
   "description": "the Zanimo.js editor",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "Paul Panserrieu <paul@42loops.com> (http://42loops.com)",
   "license": "MIT",
   "repository": {
