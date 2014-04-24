@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.42loops.zanimo" version="0.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Hello Cordova</name>
-    <description>
-        A sample Apache Cordova application that responds to the deviceready event.
-    </description>
+<widget id="com.42loops.zanimo" version="0.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="AutoHideSplashScreen" value="true" />
     <preference name="DisallowOverscroll" value="false" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value=".25" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
     <feature name="SocialMessage">
         <param name="ios-package" value="SocialMessage" />
     </feature>
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
     <name>zanimo.js</name>
     <description>
        The Zanimo.js editor
@@ -36,6 +36,9 @@
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="HideKeyboardFormAccessoryBar" value="false" />
     <preference name="KeyboardShrinksView" value="true" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="BackgroundColor" value="0xffffffff" />
+    <preference name="KeepRunning" value="true" />
     <content src="index.html" />
     <access origin="*" />
     <feature name="LocalStorage">
@@ -70,5 +73,8 @@
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
         <param name="ios-package" onload="true" value="CDVLogger" />
+    </feature>
+    <feature name="WebIntent">
+        <param name="android-package" value="com.fortytwoloops.StartIntent" />
     </feature>
 </widget>

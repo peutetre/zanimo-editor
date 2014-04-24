@@ -1,5 +1,4 @@
-#! /bin/sh
-
+<!--
 #
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -8,9 +7,9 @@
 # to you under the Apache License, Version 2.0 (the
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
-#
+# 
 # http://www.apache.org/licenses/LICENSE-2.0
-#
+# 
 # Unless required by applicable law or agreed to in writing,
 # software distributed under the License is distributed on an
 # "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -18,7 +17,12 @@
 # specific language governing permissions and limitations
 # under the License.
 #
+-->
+# Release Notes
 
-# outputs the highest level of OS X sdk installed
-OS_X_VERSIONS=$(xcodebuild -showsdks | sed -e '/./{H;$!d;}' -e 'x;/OS X SDKs/!d;' | grep -o '[0-9]*\.[0-9]* ');
-echo $OS_X_VERSIONS | tr " " "\n" | sort -g | tail -1;
+### 0.1.5 (Apr 17, 2014) (First release as a core Cordova Plugin)
+* CB-6316: Added README.md which point to the new location for docs
+* CB-6316: Added license header to the documentation. Added README.md which point to the new location for docs
+* CB-6316: Moved StatusBar plugin documentation to docs folder
+* CB-6314: [android] Add StatusBar.isVisible support to Android
+* CB-6460: Update license headers
