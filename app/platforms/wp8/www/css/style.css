@@ -1,0 +1,557 @@
+/*
+ * style.styl
+ */
+@font-face {
+  font-family: 'Anaheim';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Anaheim'), local('Anaheim-Regular'), url("fonts/anaheim.woff") format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url("fonts/roboto.woff") format('woff');
+}
+* {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+input,
+textarea {
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+body,
+html {
+  background: #808080;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #527aa0;
+}
+a:hover {
+  background: #75acdf;
+}
+.anim-screen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #fafafa;
+  display: none;
+  opacity: 0;
+}
+.documentation {
+  z-index: 1;
+  background: #fafafa;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.documentation section.content {
+  height: -webkit-calc(100% - 30px);
+  height: -moz-calc(100% - 30px);
+  height: -ms-calc(100% - 30px);
+  height: calc(100% - 30px);
+  width: 100%;
+  position: relative;
+}
+.documentation section.content div.doc-content {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 1280px;
+  margin: auto;
+}
+.documentation section.content div.doc-content dl {
+  font-size: 20px;
+  font-family: Anaheim, sans-serif;
+  margin: 0 10px;
+}
+.documentation section.content div.doc-content dl dd {
+  margin: 0 0 0 20px;
+}
+.documentation section.content div.doc-content dl dt {
+  font-weight: bold;
+}
+.documentation section.content div.doc-content p {
+  color: #000;
+  font-size: 20px;
+  margin: 15px 10px 10px 10px;
+  font-family: Anaheim, sans-serif;
+  border-bottom: 1px solid rgba(90,120,148,0.25);
+  padding: 10px 5px;
+}
+.documentation section.content div.doc-content p strong {
+  font-weight: bold;
+}
+.documentation section.content div.doc-content p.clean {
+  border-bottom: none;
+}
+.documentation section.content div.doc-content p.api-code {
+  color: #000;
+  border-bottom: none;
+  font-weight: bold;
+}
+.documentation section.content div.doc-content p.normal {
+  color: #000;
+  border-bottom: none;
+}
+.documentation section.content div.doc-content h1 {
+  color: #000;
+  font-weight: bold;
+  font-family: Anaheim, sans-serif;
+  margin: 20px 0 0 10px;
+  text-shadow: 1px 1px 2px #d1d1d1;
+  font-size: 25px;
+}
+.documentation section.content div.doc-content h2 {
+  color: #000;
+  font-weight: bold;
+  font-family: Anaheim, sans-serif;
+  margin: 0 0 0 10px;
+  text-shadow: 1px 1px 2px #d1d1d1;
+  font-size: 25px;
+}
+.documentation section.content div.doc-content h2.init {
+  margin: 0 0 30px 20px;
+}
+.documentation div.active-area {
+  -webkit-user-select: none;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  background: #76bdff;
+  border-bottom: 1px solid #75acdf;
+  cursor: pointer;
+}
+.documentation div.active-area div.chip-container {
+  background: #76bdff;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  top: -20px;
+  border-radius: 10px;
+}
+.documentation div.active-area div.chip-container div.chip,
+.documentation div.active-area div.chip-container div.chip2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.documentation div.active-area div.chip-container div.chip span,
+.documentation div.active-area div.chip-container div.chip2 span {
+  position: absolute;
+  font-size: 20px;
+  font-size: 30px;
+  color: #f0f1f3;
+  top: -2px;
+  left: 38px;
+}
+.documentation div.active-area div.chip-container div.msg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.documentation div.active-area div.chip-container div.msg strong {
+  position: absolute;
+  color: #f0f1f3;
+  top: 23px;
+  left: -100px;
+  font-size: 17px;
+  width: 300px;
+  font-family: 'Roboto', sans-serif;
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.documentation div.active-area div.chip-container div.chip2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.documentation div.active-area div.chip-container div.chip2 span {
+  position: absolute;
+  font-size: 20px;
+  font-size: 30px;
+  color: #f0f1f3;
+  top: -2px;
+  left: 38px;
+}
+.documentation div.active-area a.sign {
+  text-decoration: none;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  color: #f0f1f3;
+}
+.editor {
+  z-index: 0;
+  background: #f3f3f3;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.editor .menu-list {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 50px;
+  background: #f00;
+  z-index: 10;
+  overflow: hidden;
+  border-bottom: 1px solid #eeeded;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #76bdff;
+  background-color: #fafafa;
+  font-family: Anaheim, sans-serif;
+}
+.editor .menu-list div.wrapper {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.editor .menu-list ul.scroller {
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.editor .menu-list li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  padding: 0 0 0 20px;
+  line-height: 30px;
+  font-size: 20px;
+}
+.editor .menu-list li.section {
+  padding: 0 0 0 10px;
+  color: #51a2ee;
+  font-weight: bold;
+  cursor: default;
+}
+.editor .menu-list li.active {
+  color: #51a2ee;
+}
+.editor div.toolbar {
+  z-index: 11;
+  -webkit-user-select: none;
+  height: 50px;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  background-color: #fafafa;
+  line-height: 50px;
+  padding: 0 0 0 0px;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dadada;
+}
+.editor div.toolbar .button {
+  -webkit-appearance: none;
+  border: none;
+  background: #fafafa;
+  height: 50px;
+  width: 35px;
+  border-radius: 0;
+  float: left;
+  font-size: 21px;
+  margin: 0;
+  padding: 0;
+  color: #76bdff;
+  cursor: pointer;
+  border-bottom: 1px solid #dadada;
+}
+.editor div.toolbar .button.sign,
+.editor div.toolbar .button.logout {
+  right: 0px;
+  width: 50px;
+  position: absolute;
+  z-index: 8;
+}
+.editor div.toolbar .button.logout {
+  z-index: 6;
+}
+.editor div.toolbar .button.logout img {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+}
+.editor div.toolbar .button.active {
+  color: #67a5e0;
+}
+.editor div.toolbar .menu {
+  background: url("../images/arrow@2x.png") 90% 17px no-repeat;
+  color: #76bdff;
+  background-size: 14px;
+  height: 50px;
+  width: 120px;
+  float: left;
+  margin: 0;
+  padding: 0 0 0 10px;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  background-color: #fafafa;
+  font-family: Anaheim, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #dadada;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.editor div.toolbar .menu.active {
+  color: #51a2ee;
+  background: url("../images/arrow-active@2x.png") 90% 17px no-repeat;
+  background-color: #fafafa;
+  background-size: 14px;
+}
+.editor div.toolbar .select-container {
+  background: url("../images/arrow@2x.png") 90% 17px no-repeat;
+  color: #76bdff;
+  background-size: 14px;
+  height: 50px;
+  width: 120px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #fafafa;
+}
+.editor div.toolbar .select-container .select {
+  width: 140px;
+  font-size: 14px;
+  padding: 0 30px 0 10px;
+  color: inherit;
+  margin: 0;
+  z-index: 0;
+  background: transparent;
+  text-overflow: ellipsis;
+  font-family: Anaheim, sans-serif;
+  font-size: 18px;
+}
+.editor .CodeMirror {
+  -webkit-user-select: none;
+  position: absolute;
+  background: #fff;
+  top: 80px;
+  width: 100%;
+  height: -webkit-calc(100% - 80px);
+  height: -moz-calc(100% - 80px);
+  height: -ms-calc(100% - 80px);
+  height: calc(100% - 80px);
+  background: #fdfdfd;
+  font-family: monospace;
+  font-size: 15px;
+}
+.editor .CodeMirror .CodeMirror-gutters {
+  border-right: 1px solid #ececec;
+  background: none;
+}
+textarea {
+  position: absolute;
+  background: #fff;
+  top: 80px;
+  width: 100%;
+  -webkit-appearance: none;
+  border-radius: 0;
+  font-size: 16px;
+  height: -webkit-calc(100% - 80px);
+  height: -moz-calc(100% - 80px);
+  height: -ms-calc(100% - 80px);
+  height: calc(100% - 80px);
+  border: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 14px;
+}
+.alert {
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+}
+.alert h2 {
+  color: #eee;
+  font-family: 'Roboto', sans-serif;
+  padding: 5px 10px 10px 10px;
+  background: #76bdff;
+  font-size: 24px;
+  height: 32px;
+  border-bottom: 1px solid #75acdf;
+}
+.alert div {
+  text-align: left;
+  padding: 10px;
+  overflow: auto;
+  height: -webkit-calc(100% - 97px);
+  height: -webkit-calc(100% - 97px);
+  height: -moz-calc(100% - 97px);
+  height: -ms-calc(100% - 97px);
+  height: calc(100% - 97px);
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #444;
+  background: #fafafa;
+}
+.alert span {
+  -webkit-appearance: none;
+  font-weight: bold;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  height: 30px;
+  border: none;
+  background: #76bdff;
+  text-align: center;
+  font-size: 18px;
+  color: #f5f5f5;
+  font-family: Anaheim, sans-serif;
+  line-height: 30px;
+  border-top: 1px solid #75acdf;
+}
+.alert span {
+  cursor: pointer;
+}
+.alert span.active {
+  cursor: pointer;
+  background: #75acdf;
+  color: #fff;
+}
+.alert div.tutorial {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.alert div.tutorial img {
+  width: 285px;
+  margin: 0 auto;
+}
+.alert i {
+  position: absolute;
+  bottom: 40px;
+}
+.prompt {
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+}
+.prompt h2 {
+  color: #eee;
+  font-family: 'Roboto', sans-serif;
+  padding: 5px 10px 10px 10px;
+  background: #76bdff;
+  font-size: 24px;
+  height: 32px;
+  border-bottom: 1px solid #75acdf;
+}
+.prompt input {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  height: 40px;
+  font-size: 24px;
+  padding: 0 5px 0 10px;
+  color: #585858;
+  margin: 0;
+  background: #fafafa;
+  width: 100%;
+}
+.prompt div {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #444;
+  padding: 10px;
+  overflow: auto;
+  height: 43px;
+  background: #fafafa;
+}
+.prompt span {
+  -webkit-appearance: none;
+  font-weight: bold;
+  width: 50%;
+  bottom: 0;
+  position: absolute;
+  height: 40px;
+  border: none;
+  background: #76bdff;
+  text-align: center;
+  font-size: 20px;
+  color: #f5f5f5;
+  font-family: Anaheim, sans-serif;
+  line-height: 40px;
+  border-top: 1px solid #75acdf;
+  box-sizing: border-box;
+  left: 0;
+  border-right: 1px solid #75acdf;
+}
+.prompt span.ok {
+  left: 50%;
+}
+.prompt span {
+  cursor: pointer;
+}
+.prompt span.active {
+  background: #75acdf;
+  color: #fff;
+}

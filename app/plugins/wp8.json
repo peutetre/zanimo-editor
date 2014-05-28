@@ -1,0 +1,81 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"wp-package\" value=\"DebugConsole\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"wp-package\" value=\"Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"wp-package\" value=\"InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"wp-package\" value=\"NetworkStatus\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"wp-package\" value=\"SplashScreen\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"wp-package\" value=\"StatusBar\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "Properties/WMAppManifest.xml": {
+                "parents": {
+                    "/Deployment/App/Capabilities": [
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_IDENTITY_DEVICE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_NETWORKING\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
+        },
+        "org.apache.cordova.keyboard": {
+            "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
+        },
+        "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
+        },
+        "org.apache.cordova.statusbar": {
+            "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
+        },
+        "socialmessage": {
+            "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
+        }
+    },
+    "dependent_plugins": {}
+}
