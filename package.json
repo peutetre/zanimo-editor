@@ -9,6 +9,8 @@
     "url": "https://github.com/peutetre/zanimo-editor.git"
   },
   "scripts": {
+    "symlink": "node bin/symlink.js",
+    "clean": "node bin/clean.js",
     "appcache": "node bin/appcache.js",
     "index:cordova": "node bin/index.js cordova",
     "index:web": "node bin/index.js web",
@@ -22,7 +24,7 @@
     "browserify:prod": "node node_modules/browserify/bin/cmd.js lib/app.js -o www/app.js",
     "css": "node bin/css.js",
     "common:web": "npm run appcache && npm run index:web && npm run css",
-    "common:cordova": "npm run index:cordova && npm run css && npm run env:cordova && npm run browserify:prod",
+    "common:cordova": "npm run symlink && npm run index:cordova && npm run css && npm run env:cordova && npm run browserify:prod",
     "dev": "npm run common:web && npm run env:dev && npm run browserify:debug",
     "prod": "npm run common:web && npm run env:prod && npm run browserify:prod",
     "staging": "npm run common:web && npm run env:staging && npm run browserify:debug",
