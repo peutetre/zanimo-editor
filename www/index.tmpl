@@ -23,6 +23,31 @@
             </script>
         <![endif]-->
 
+        <script>
+          if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+              <!-- @if ZANIMO_ENV='cordova' -->
+              if(window.external) {
+                  window.console = {
+                      log : function() { window.external.Notify(Array.prototype.join.call(arguments, ', ')); }
+                  };
+
+                  window.console.info = window.console.error = window.console.warn = window.console.log;
+
+                  window.onerror = function (e) {
+                      console.log("[window.onerror]", e);
+                  };
+
+                  console.log('[overwrite]', 'window.console for wp8');
+              }
+              <!-- @endif -->
+              var msViewportStyle = document.createElement("style");
+              msViewportStyle.appendChild(
+                  document.createTextNode("@-ms-viewport{width:auto!important}")
+              );
+              document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+          }
+        </script>
+
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="vendor/codemirror/codemirror.css">
         <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
