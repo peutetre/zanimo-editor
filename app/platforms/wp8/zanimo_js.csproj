@@ -241,6 +241,9 @@
         <Content Include="www\css\style.css" />
     </ItemGroup>
     <ItemGroup>
+        <Content Include="www\css\wp8.css" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www\images\apple-touch-icon-114x114-precomposed.png" />
     </ItemGroup>
     <ItemGroup>
@@ -260,6 +263,45 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\images\favicon.ico" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\github-active.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\github.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\play-active.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\play.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\save-active.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\save.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\screen.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\share-sign-active.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\share-sign.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\trash-active.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\trash.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\user-active.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\images\user.png" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\index.html" />

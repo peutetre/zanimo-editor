@@ -53,8 +53,16 @@
         <link rel="stylesheet" href="vendor/codemirror/codemirror.css">
         <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
         <link rel="stylesheet" href="css/style.css">
+        <!-- @if IS_WP8 -->
+        <link rel="stylesheet" href="css/wp8.css">
+        <!-- @endif -->
+
         <!-- @if ZANIMO_ENV='cordova' -->
         <script src="cordova.js"></script>
+        <!-- @endif -->
+
+        <!-- @if IS_WP8 -->
+        <!-- <script src="http://192.168.0.150:8081/target/target-script-min.js#oops" type="text/javascript"></script> -->
         <!-- @endif -->
 
     </head>

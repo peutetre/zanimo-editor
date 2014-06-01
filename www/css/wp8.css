@@ -1,0 +1,89 @@
+.button.icon-play:before,
+.button.icon-save:before,
+.button.icon-trash:before,
+.button.icon-share-sign:before,
+.button.icon-user:before,
+.button.icon-github:before {
+  content: "" !important;
+}
+
+.button.icon-play:after,
+.button.icon-save:after,
+.button.icon-trash:after,
+.button.icon-share-sign:after,
+.button.icon-user:after,
+.button.icon-github:after {
+  content: "" !important;
+}
+
+.button.icon-play {
+	background:url('../images/play.png') 0 10px no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-save {
+	background:url('../images/save.png') 0 10px no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-trash {
+	background:url('../images/trash.png') 0 10px no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-share-sign {
+	background:url('../images/share-sign.png') 0 10px  no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-user {
+	background:url('../images/user.png') 0 10px no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-github {
+	background:url('../images/github.png') 0 10px no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-play.active {
+	background:url('../images/play-active.png') 0 10px no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-save.active {
+	background:url('../images/save-active.png') 0 10px no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-trash.active {
+	background:url('../images/trash-active.png') 0 10px no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-share-sign.active {
+	background:url('../images/share-sign-active.png') 0 10px  no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-user.active {
+	background:url('../images/user-active.png') 0 10px no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}
+
+.button.icon-github.active {
+	background:url('../images/github-active.png') 0 10px no-repeat !important;
+	background-color: #fafafa !important;
+	background-size: 35px !important;
+}

@@ -13,6 +13,7 @@
     "clean": "node bin/clean.js",
     "appcache": "node bin/appcache.js",
     "index:cordova": "node bin/index.js cordova",
+    "index:wp8": "node bin/index.js cordova true",
     "index:web": "node bin/index.js web",
     "env:dev": "node bin/env.js dev",
     "env:staging": "node bin/env.js staging",
@@ -25,6 +26,7 @@
     "css": "node bin/css.js",
     "common:web": "npm run appcache && npm run index:web && npm run css",
     "common:cordova": "npm run symlink && npm run index:cordova && npm run css && npm run env:cordova && npm run browserify:prod",
+    "common:wp8": "npm run symlink && npm run index:wp8 && npm run css && npm run env:cordova && npm run browserify:prod",
     "dev": "npm run common:web && npm run env:dev && npm run browserify:debug",
     "prod": "npm run common:web && npm run env:prod && npm run browserify:prod",
     "staging": "npm run common:web && npm run env:staging && npm run browserify:debug",
@@ -33,7 +35,7 @@
     "cordova:wp8": "cd app & ..\\node_modules\\cordova\\bin\\cordova prepare wp8 & cd ..",
     "ios": "npm run common:cordova && npm run config:ios && npm run cordova:ios",
     "android": "npm run common:cordova && npm run config:android && npm run cordova:android",
-    "wp8": "npm run common:cordova && npm run config:android && npm run cordova:wp8",
+    "wp8": "npm run common:wp8 && npm run config:android && npm run cordova:wp8",
     "all": "npm run ios && npm run android"
   },
   "dependencies": {
