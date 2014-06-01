@@ -40,13 +40,32 @@ input, textarea
     -ms-user-select: text;
     user-select: text;
 
-body, html
-    background bodyColor
-    height 100%
-    width 100%
-    position absolute
+html
+    background #fff;
     overflow hidden
     -webkit-font-smoothing: antialiased;
+    margin 0
+    padding 0
+    position absolute
+    width 100%
+    -ms-touch-action:none;
+    touch-action:none;
+    -ms-content-zooming: none;
+    content-zooming: none;
+
+body
+    -ms-touch-action:none;
+    touch-action:none;
+    -ms-content-zooming: none;
+    content-zooming: none;
+    position absolute
+    height 100%
+    width 100%
+    top 0
+    bottom 0
+    margin 0
+    padding 0
+    overflow: hidden
 
 a
     color linkColor
