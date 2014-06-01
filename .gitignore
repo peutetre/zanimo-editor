@@ -24,6 +24,10 @@
 
 /app/platforms/android/assets/www/**
 
+/app/platforms/wp8/Bin/**
+/app/platforms/wp8/www/**
+/app/platforms/wp8/obj/**
+
 !.gitkeep
 
 /app/config.xml
