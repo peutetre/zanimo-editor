@@ -36,7 +36,7 @@
 #pragma mark CDVInAppBrowser
 
 @interface CDVInAppBrowser () {
-    UIStatusBarStyle _previousStatusBarStyle;
+    NSInteger _previousStatusBarStyle;
 }
 @end
 
@@ -46,19 +46,11 @@
 {
     self = [super initWithWebView:theWebView];
     if (self != nil) {
-        // your initialization here
-        [self clear:nil];
+        _previousStatusBarStyle = -1;
+        _callbackIdPattern = nil;
     }
 
     return self;
-}
-
-- (void)clear:(CDVInvokedUrlCommand*)command
-{
-    [[NSURLCache sharedURLCache] removeAllCachedResponses];
-    for(NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
-        [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
-    }
 }
 
 - (void)onReset
@@ -68,6 +60,10 @@
 
 - (void)close:(CDVInvokedUrlCommand*)command
 {
+    if (self.inAppBrowserViewController == nil) {
+        NSLog(@"IAB.close() called but it was already closed.");
+        return;
+    }
     // Things are cleaned up in browserExit.
     [self.inAppBrowserViewController close];
 }
@@ -119,6 +115,29 @@
 - (void)openInInAppBrowser:(NSURL*)url withOptions:(NSString*)options
 {
     CDVInAppBrowserOptions* browserOptions = [CDVInAppBrowserOptions parseOptions:options];
+
+    if (browserOptions.clearcache) {
+        NSHTTPCookie *cookie;
+        NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        for (cookie in [storage cookies])
+        {
+            if (![cookie.domain isEqual: @".^filecookies^"]) {
+                [storage deleteCookie:cookie];
+            }
+        }
+    }
+
+    if (browserOptions.clearsessioncache) {
+        NSHTTPCookie *cookie;
+        NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        for (cookie in [storage cookies])
+        {
+            if (![cookie.domain isEqual: @".^filecookies^"] && cookie.isSessionOnly) {
+                [storage deleteCookie:cookie];
+            }
+        }
+    }
+
     if (self.inAppBrowserViewController == nil) {
         NSString* originalUA = [CDVUserAgentUtil originalUserAgent];
         self.inAppBrowserViewController = [[CDVInAppBrowserViewController alloc] initWithUserAgent:originalUA prevUserAgent:[self.commandDelegate userAgent] browserOptions: browserOptions];
@@ -128,8 +147,6 @@
             self.inAppBrowserViewController.orientationDelegate = (UIViewController <CDVScreenOrientationDelegate>*)self.viewController;
         }
     }
-
-    _previousStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
 
     [self.inAppBrowserViewController showLocationBar:browserOptions.location];
     [self.inAppBrowserViewController showToolBar:browserOptions.toolbar :browserOptions.toolbarposition];
@@ -180,30 +197,34 @@
         self.inAppBrowserViewController.webView.suppressesIncrementalRendering = browserOptions.suppressesincrementalrendering;
     }
   
-    if (! browserOptions.hidden) {
-        
-        UINavigationController* nav = [[UINavigationController alloc]
-                                       initWithRootViewController:self.inAppBrowserViewController];
-        nav.navigationBarHidden = YES;
-        
-      if (self.viewController.modalViewController != self.inAppBrowserViewController) {
-          [self.viewController presentModalViewController:nav animated:YES];
-      }
-    }
     [self.inAppBrowserViewController navigateTo:url];
+    if (!browserOptions.hidden) {
+        [self show:nil];
+    }
 }
 
 - (void)show:(CDVInvokedUrlCommand*)command
 {
-    if ([self.inAppBrowserViewController isViewLoaded] && self.inAppBrowserViewController.view.window)
+    if (self.inAppBrowserViewController == nil) {
+        NSLog(@"Tried to show IAB after it was closed.");
         return;
+    }
+    if (_previousStatusBarStyle != -1) {
+        NSLog(@"Tried to show IAB while already shown");
+        return;
+    }
     
     _previousStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
     
     UINavigationController* nav = [[UINavigationController alloc]
                                    initWithRootViewController:self.inAppBrowserViewController];
     nav.navigationBarHidden = YES;
-    [self.viewController presentModalViewController:nav animated:YES];
+    // Run later to avoid the "took a long time" log message.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.inAppBrowserViewController != nil) {
+            [self.viewController presentModalViewController:nav animated:YES];
+        }
+    });
 }
 
 - (void)openInCordovaWebView:(NSURL*)url withOptions:(NSString*)options
@@ -300,6 +321,23 @@
     [self injectDeferredObject:[command argumentAtIndex:0] withWrapper:jsWrapper];
 }
 
+- (BOOL)isValidCallbackId:(NSString *)callbackId
+{
+    NSError *err = nil;
+    // Initialize on first use
+    if (self.callbackIdPattern == nil) {
+        self.callbackIdPattern = [NSRegularExpression regularExpressionWithPattern:@"^InAppBrowser[0-9]{1,10}$" options:0 error:&err];
+        if (err != nil) {
+            // Couldn't initialize Regex; No is safer than Yes.
+            return NO;
+        }
+    }
+    if ([self.callbackIdPattern firstMatchInString:callbackId options:0 range:NSMakeRange(0, [callbackId length])]) {
+        return YES;
+    }
+    return NO;
+}
+
 /**
  * The iframe bridge provided for the InAppBrowser is capable of executing any oustanding callback belonging
  * to the InAppBrowser plugin. Care has been taken that other callbacks cannot be triggered, and that no
@@ -326,7 +364,7 @@
         NSString* scriptCallbackId = [url host];
         CDVPluginResult* pluginResult = nil;
 
-        if ([scriptCallbackId hasPrefix:@"InAppBrowser"]) {
+        if ([self isValidCallbackId:scriptCallbackId]) {
             NSString* scriptResult = [url path];
             NSError* __autoreleasing error = nil;
 
@@ -380,7 +418,7 @@
     if (self.callbackId != nil) {
         NSString* url = [self.inAppBrowserViewController.currentURL absoluteString];
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
-                                                      messageAsDictionary:@{@"type":@"loaderror", @"url":url, @"code": [NSNumber numberWithInt:error.code], @"message": error.localizedDescription}];
+                                                      messageAsDictionary:@{@"type":@"loaderror", @"url":url, @"code": [NSNumber numberWithInteger:error.code], @"message": error.localizedDescription}];
         [pluginResult setKeepCallback:[NSNumber numberWithBool:YES]];
 
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
@@ -400,6 +438,8 @@
     // Don't recycle the ViewController since it may be consuming a lot of memory.
     // Also - this is required for the PDF/User-Agent bug work-around.
     self.inAppBrowserViewController = nil;
+        
+    _previousStatusBarStyle = -1;
 
     if (IsAtLeastiOSVersion(@"7.0")) {
         [[UIApplication sharedApplication] setStatusBarStyle:_previousStatusBarStyle];
@@ -511,14 +551,18 @@
     self.addressLabel.contentStretch = CGRectFromString(@"{{0, 0}, {1, 1}}");
     self.addressLabel.enabled = YES;
     self.addressLabel.hidden = NO;
-    self.addressLabel.lineBreakMode = UILineBreakModeTailTruncation;
-    self.addressLabel.minimumFontSize = 10.000;
+    self.addressLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    if (IsAtLeastiOSVersion(@"6.0")) {
+        self.addressLabel.minimumScaleFactor = 10.0/[UIFont labelFontSize];
+    } else {
+        self.addressLabel.minimumFontSize = 10.000;
+    }
     self.addressLabel.multipleTouchEnabled = NO;
     self.addressLabel.numberOfLines = 1;
     self.addressLabel.opaque = NO;
     self.addressLabel.shadowOffset = CGSizeMake(0.0, -1.0);
     self.addressLabel.text = NSLocalizedString(@"Loading...", nil);
-    self.addressLabel.textAlignment = UITextAlignmentLeft;
+    self.addressLabel.textAlignment = NSTextAlignmentLeft;
     self.addressLabel.textColor = [UIColor colorWithWhite:1.000 alpha:1.000];
     self.addressLabel.userInteractionEnabled = NO;
 
@@ -691,18 +735,20 @@
 - (void)close
 {
     [CDVUserAgentUtil releaseLock:&_userAgentLockToken];
-
-    if ([self respondsToSelector:@selector(presentingViewController)]) {
-        [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
-    } else {
-        [[self parentViewController] dismissModalViewControllerAnimated:YES];
-    }
-
     self.currentURL = nil;
-
+    
     if ((self.navigationDelegate != nil) && [self.navigationDelegate respondsToSelector:@selector(browserExit)]) {
         [self.navigationDelegate browserExit];
     }
+
+    // Run later to avoid the "took a long time" log message.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self respondsToSelector:@selector(presentingViewController)]) {
+            [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            [[self parentViewController] dismissModalViewControllerAnimated:YES];
+        }
+    });
 }
 
 - (void)navigateTo:(NSURL*)url
@@ -815,7 +861,7 @@
 - (void)webView:(UIWebView*)theWebView didFailLoadWithError:(NSError*)error
 {
     // log fail message, stop spinner, update back/forward
-    NSLog(@"webView:didFailLoadWithError - %i: %@", error.code, [error localizedDescription]);
+    NSLog(@"webView:didFailLoadWithError - %ld: %@", (long)error.code, [error localizedDescription]);
 
     self.backButton.enabled = theWebView.canGoBack;
     self.forwardButton.enabled = theWebView.canGoForward;
@@ -866,6 +912,8 @@
         self.toolbar = YES;
         self.closebuttoncaption = nil;
         self.toolbarposition = kInAppBrowserToolbarBarPositionBottom;
+        self.clearcache = NO;
+        self.clearsessioncache = NO;
 
         self.enableviewportscale = NO;
         self.mediaplaybackrequiresuseraction = NO;

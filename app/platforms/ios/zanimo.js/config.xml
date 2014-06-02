@@ -77,4 +77,7 @@
     <feature name="WebIntent">
         <param name="android-package" value="com.fortytwoloops.StartIntent" />
     </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
 </widget>
