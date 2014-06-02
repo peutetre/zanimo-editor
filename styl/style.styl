@@ -48,6 +48,7 @@ html
     padding 0
     position absolute
     width 100%
+    height 100%
     -ms-touch-action:none;
     touch-action:none;
     -ms-content-zooming: none;
@@ -90,7 +91,10 @@ a:hover
     height 100%
     width 100%
     position absolute
-
+    top: unquote('-webkit-calc(-100% + 30px)');
+    top: unquote('-moz-calc(-100% + 30px)');
+    top: unquote('-ms-calc(-100% + 30px)');
+    top: unquote('calc(-100% + 30px)');
     section.content
         height: unquote('-webkit-calc(100% - 30px)');
         height: unquote('-moz-calc(100% - 30px)');

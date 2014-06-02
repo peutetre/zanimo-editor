@@ -35,6 +35,7 @@ html {
   padding: 0;
   position: absolute;
   width: 100%;
+  height: 100%;
   -ms-touch-action: none;
   touch-action: none;
   -ms-content-zooming: none;
@@ -77,6 +78,10 @@ a:hover {
   height: 100%;
   width: 100%;
   position: absolute;
+  top: -webkit-calc(-100% + 30px);
+  top: -moz-calc(-100% + 30px);
+  top: -ms-calc(-100% + 30px);
+  top: calc(-100% + 30px);
 }
 .documentation section.content {
   height: -webkit-calc(100% - 30px);
