@@ -5,11 +5,13 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDC13BBADB100FB74C0 /* Localizable.strings */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		2E4C80B3E950489F83C796B7 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 857D9D655B3A49DEBF1645D4 /* CDVInAppBrowser.m */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
@@ -47,7 +49,6 @@
 		B75E1F4502884C798323DF5F /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FC4D05E7D6402484272B9B /* CDVSplashScreen.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
-		3BD8F040F23844838465213D /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B9F3A7E424C47A8F8C762 /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +128,6 @@
 		F1174894E7534AE9A7211D1F /* CDVSplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = org.apache.cordova.splashscreen/CDVSplashScreen.h; sourceTree = "<group>"; };
 		F72A7C587AAF44248E2D9B2C /* CDVConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVConnection.h; path = "org.apache.cordova.network-information/CDVConnection.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = zanimo.js/config.xml; sourceTree = "<group>"; };
-		A04B9F3A7E424C47A8F8C762 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "Plugins\org.apache.cordova.inappbrowser\CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		69C050DF74EA429CBC3C3B6C /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "Plugins\org.apache.cordova.inappbrowser\CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,8 +257,6 @@
 				C52D512F1B704FD780539F20 /* SocialMessage.h */,
 				A2043444BCB84587B196BAF6 /* CDVKeyboard.m */,
 				A7F69C54B77C47A8821F3557 /* CDVKeyboard.h */,
-				A04B9F3A7E424C47A8F8C762 /* CDVInAppBrowser.m */,
-				69C050DF74EA429CBC3C3B6C /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = zanimo.js/Plugins;
@@ -439,9 +436,9 @@
 				459EA2C2D5DF4427B98F41E4 /* CDVDevice.m in Sources */,
 				B75E1F4502884C798323DF5F /* CDVSplashScreen.m in Sources */,
 				43D3E319933C494DA3370542 /* CDVStatusBar.m in Sources */,
+				2E4C80B3E950489F83C796B7 /* CDVInAppBrowser.m in Sources */,
 				B536FBEDFF214EC090D9AE71 /* SocialMessage.m in Sources */,
 				A06B734738B64B9A91773213 /* CDVKeyboard.m in Sources */,
-				3BD8F040F23844838465213D /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

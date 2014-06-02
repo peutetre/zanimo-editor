@@ -21,6 +21,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"SocialMessage\"><param name=\"ios-package\" value=\"SocialMessage\" /></feature>",
                             "count": 1
                         },
@@ -42,10 +46,6 @@
                         },
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -79,6 +79,9 @@
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.42loops.zanimo"
         },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.42loops.zanimo"
+        },
         "socialmessage": {
             "PACKAGE_NAME": "com.42loops.zanimo"
         },
@@ -89,9 +92,6 @@
             "PACKAGE_NAME": "com.42loops.zanimo"
         },
         "org.apache.cordova.splashscreen": {
-            "PACKAGE_NAME": "com.42loops.zanimo"
-        },
-        "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "com.42loops.zanimo"
         }
     },

@@ -17,6 +17,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"wp-package\" value=\"InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"wp-package\" value=\"NetworkStatus\" /></feature>",
                             "count": 1
                         },
@@ -26,10 +30,6 @@
                         },
                         {
                             "xml": "<feature name=\"StatusBar\"><param name=\"wp-package\" value=\"StatusBar\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"wp-package\" value=\"InAppBrowser\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -44,7 +44,7 @@
                         },
                         {
                             "xml": "<Capability Name=\"ID_CAP_NETWORKING\" />",
-                            "count": 2
+                            "count": 1
                         }
                     ]
                 }
@@ -56,6 +56,9 @@
             "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
         },
         "org.apache.cordova.device": {
+            "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
+        },
+        "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
         },
         "org.apache.cordova.keyboard": {
@@ -71,9 +74,6 @@
             "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
         },
         "socialmessage": {
-            "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
-        },
-        "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "{E482326F-CC42-4776-97E6-F68B434A9C2F}"
         }
     },

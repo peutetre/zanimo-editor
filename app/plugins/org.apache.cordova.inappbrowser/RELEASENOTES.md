@@ -64,36 +64,3 @@
 * Apply CB-5193 to InAppBrowser (Fix DB quota exception)
 * CB-5593 iOS: Make InAppBrowser localizable
 * CB-5591 Change window.escape to encodeURIComponent
-
-### 0.3.1 (Feb 05, 2014)
-* CB-5756: Android: Use WebView.evaluateJavascript for script injection on Android 4.4+
-* Didn't test on ICS or lower, getDrawable isn't supported until Jellybean
-* add ubuntu platform
-* Adding drawables to the inAppBrowser.  This doesn't look quite right, but it's a HUGE improvement over the previous settings
-* CB-5756: Android: Use WebView.evaluateJavascript for script injection on Android 4.4+
-* Remove alive from InAppBrowser.js since it didn't catch the case where the browser is closed by the user.
-* CB-5733 Fix IAB.close() not working if called before show() animation is done
-
-### 0.3.2 (Feb 26, 2014)
-* Validate that callbackId is correctly formed
-* CB-6035 Move js-module so it is not loaded on unsupported platforms
-* Removed some iOS6 Deprecations
-
-### 0.3.3 (Mar 5, 2014)
-* CB-5534 Fix video/audio does not stop playing when browser is closed
-* CB-6172 Fix broken install on case-sensitive file-systems
-
-
-### 0.4.0 (Apr 17, 2014)
-* CB-6360: [ios] Fix for crash on iOS < 6.0 (closes #37)
-* CB-3324: [WP8] Add support for back-button inappbrowser [WP8] if there is no history -> InAppBrowser is closed
-* [WP] await async calls, resolve warnings
-* [WP] Make InAppBrowser work with embedded files, using system behavior
-* CB-6402: [WP8] pass empty string instead of null for [optional] windowFeatures string
-* CB-6422: [windows8] use cordova/exec/proxy
-* CB-6389 CB-3617: Add clearcache and clearsessioncache options to iOS (like Android)
-* Doc update: event name and example param (closes #31)
-* CB-6253: [WP] Add Network Capability to WMAppManifest.xml
-* CB-6212: [iOS] fix warnings compiled under arm64 64-bit
-* CB-6218: Update docs for BB10
-* CB-6460: Update license headers

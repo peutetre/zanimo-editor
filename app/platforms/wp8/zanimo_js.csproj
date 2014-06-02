@@ -205,6 +205,9 @@
         <Compile Include="Plugins\org.apache.cordova.device\Device.cs" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Plugins\org.apache.cordova.inappbrowser\InAppBrowser.cs" />
+    </ItemGroup>
+    <ItemGroup>
         <Compile Include="Plugins\org.apache.cordova.network-information\NetworkStatus.cs" />
     </ItemGroup>
     <ItemGroup>
@@ -212,9 +215,6 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Plugins\org.apache.cordova.statusbar\StatusBar.cs" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Plugins\org.apache.cordova.inappbrowser\InAppBrowser.cs" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\app.js" />
@@ -325,7 +325,7 @@
         <Content Include="www\plugins\org.apache.cordova.device\www\device.js" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\plugins\org.apache.cordova.inappbrowser\www\inappbrowser.js" />
+        <Content Include="www\plugins\org.apache.cordova.inappbrowser\www\InAppBrowser.js" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\plugins\org.apache.cordova.keyboard\www\keyboard.js" />

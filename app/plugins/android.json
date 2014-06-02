@@ -13,6 +13,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
                             "count": 1
                         },
@@ -22,10 +26,6 @@
                         },
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -64,6 +64,9 @@
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.42loops.zanimo"
         },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.42loops.zanimo"
+        },
         "org.apache.cordova.network-information": {
             "PACKAGE_NAME": "com.42loops.zanimo"
         },
@@ -77,9 +80,6 @@
             "PACKAGE_NAME": "com.fortytwoloops.zanimo"
         },
         "org.apache.cordova.splashscreen": {
-            "PACKAGE_NAME": "com.fortytwoloops.zanimo"
-        },
-        "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "com.fortytwoloops.zanimo"
         }
     },
