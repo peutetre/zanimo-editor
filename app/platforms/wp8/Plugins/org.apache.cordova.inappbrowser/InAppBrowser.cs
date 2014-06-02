@@ -51,7 +51,7 @@ namespace WPCordovaClassLib.Cordova.Commands
             //BrowserOptions opts = JSON.JsonHelper.Deserialize<BrowserOptions>(options);
             string urlLoc = args[0];
             string target = args[1];
-            string featString = args[2];
+            string featString = "";
 
             string[] features = featString.Split(',');
             foreach (string str in features)
@@ -226,6 +226,7 @@ namespace WPCordovaClassLib.Cordova.Commands
                 {
                     //browser.IsGeolocationEnabled = opts.isGeolocationEnabled;
                     browser.Navigate(loc);
+                    browser.ClearCookiesAsync();
                 }
                 else
                 {
@@ -242,6 +243,7 @@ namespace WPCordovaClassLib.Cordova.Commands
                             if (grid != null)
                             {
                                 browser = new WebBrowser();
+                                browser.ClearCookiesAsync();
                                 browser.IsScriptEnabled = true;
                                 browser.LoadCompleted += new System.Windows.Navigation.LoadCompletedEventHandler(browser_LoadCompleted);
 
