@@ -283,9 +283,6 @@
         <Content Include="www\images\save.png" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\images\screen.png" />
-    </ItemGroup>
-    <ItemGroup>
         <Content Include="www\images\share-sign-active.png" />
     </ItemGroup>
     <ItemGroup>
