@@ -1,38 +1,38 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment AppPlatformVersion="8.0" xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment">
-    <DefaultLanguage code="en-US" xmlns="" />
-    <Languages xmlns="">
-        <Language code="en-US" />
-    </Languages>
-    <App Author="Paul Panserrieu" BitsPerPixel="32" Description="the zanimo.js editor." Genre="apps.normal" ProductID="{E482326F-CC42-4776-97E6-F68B434A9C2F}" Publisher="zanimo.js" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="zanimo.js" Version="0.0.8" xmlns="">
-        <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
-        <Capabilities>
-            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
-            <Capability Name="ID_CAP_NETWORKING" />
-            <Capability Name="ID_CAP_IDENTITY_DEVICE" />
-        </Capabilities>
-        <Tasks>
-            <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
-        </Tasks>
-        <Tokens>
-            <PrimaryToken TaskName="_default" TokenID="zanimo.jsToken">
-                <TemplateFlip>
-                    <SmallImageURI IsRelative="true" IsResource="false">Background.png</SmallImageURI>
-                    <Count>0</Count>
-                    <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
-                    <Title>zanimo.js</Title>
-                    <BackContent />
-                    <BackBackgroundImageURI />
-                    <BackTitle />
-                    <DeviceLockImageURI />
-                    <HasLarge>False</HasLarge>
-                </TemplateFlip>
-            </PrimaryToken>
-        </Tokens>
-        <ScreenResolutions>
-            <ScreenResolution Name="ID_RESOLUTION_WVGA" />
-            <ScreenResolution Name="ID_RESOLUTION_WXGA" />
-            <ScreenResolution Name="ID_RESOLUTION_HD720P" />
-        </ScreenResolutions>
-    </App>
+  <DefaultLanguage code="en-US" xmlns="" />
+  <Languages xmlns="">
+    <Language code="en-US" />
+  </Languages>
+  <App Author="Paul Panserrieu" BitsPerPixel="32" Description="the zanimo.js editor." Genre="apps.normal" ProductID="{E482326F-CC42-4776-97E6-F68B434A9C2F}" Publisher="Paul Panserrieu" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="zanimo.js" Version="0.0.9" xmlns="">
+    <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TaskName="_default" TokenID="zanimo.js">
+        <TemplateFlip>
+          <SmallImageURI IsRelative="true" IsResource="false">Background.png</SmallImageURI>
+          <Count>0</Count>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+          <Title>zanimo.js</Title>
+          <BackContent />
+          <BackBackgroundImageURI />
+          <BackTitle />
+          <DeviceLockImageURI />
+          <HasLarge>False</HasLarge>
+        </TemplateFlip>
+      </PrimaryToken>
+    </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
+  </App>
 </Deployment>
