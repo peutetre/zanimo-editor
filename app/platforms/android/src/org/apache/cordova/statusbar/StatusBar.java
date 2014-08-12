@@ -24,6 +24,7 @@ import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 
+import org.apache.cordova.PluginResult;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaInterface;
