@@ -34,7 +34,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Resources;
 
 
-namespace com.fortytwoloops.zanimo
+namespace com.fortytwoloops.zanimodev
 {
     public partial class MainPage : PhoneApplicationPage
     {

@@ -65,6 +65,30 @@
         "versionCode":"6"
       }
     },
+    "wp8": {
+      "default": {
+        "version": "0.1.0-dev",
+        "id": "com.fortytwoloops.zanimodev",
+        "product_name": "zanimo.js dev",
+        "product_file_name": "zanimojsdev",
+        "api": "https://api.github.com",
+        "site": "https://github.com",
+        "clientId": "8246dbce64b5946c89a6",
+        "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org",
+        "guid": "4ef2e271-8180-44f1-b437-4f932b28f90a"
+      },
+      "prod": {
+        "id": "com.fortytwoloops.zanimo",
+        "product_name": "zanimo.js",
+        "product_file_name": "zanimojs",
+        "api": "https://api.github.com",
+        "site": "https://github.com",
+        "clientId": "8246dbce64b5946c89a6",
+        "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org",
+        "release_mode": true,
+        "guid": "E482326F-CC42-4776-97E6-F68B434A9C2F"
+      }
+    },
     "web": {
       "default": {
         "version": "0.1.0-dev",
