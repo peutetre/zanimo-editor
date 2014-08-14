@@ -1,0 +1,11 @@
+{
+    "version" : "version",
+    "id" : "id",
+    "product_name" : "appName",
+    "api" : "api",
+    "site" : "site",
+    "clientId" : "clientId",
+    "gatekeeperUrl" : "gatekeeperUrl",
+    "custom_url_scheme" : "custom_url_scheme",
+    "intent": "intent"
+}

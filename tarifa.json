@@ -1,0 +1,119 @@
+{
+  "name": "zanimo.js",
+  "id": "com.42loops.zanimo",
+  "description": "the zanimo.js editor",
+  "version": "0.1.0",
+  "platforms": [
+    "ios",
+    "android",
+    "wp8",
+    "web"
+  ],
+  "plugins": [
+    "org.apache.cordova.console",
+    "org.apache.cordova.device",
+    "org.apache.cordova.network-information",
+    "org.apache.cordova.splashscreen",
+    "org.apache.cordova.inappbrowser",
+    "org.apache.cordova.keyboard",
+    "org.apache.cordova.statusbar",
+    "socialmessage"
+  ],
+  "configurations": {
+    "ios": {
+      "default": {
+        "version": "0.1.0-dev",
+        "id": "com.42loops.zanimodev",
+        "product_name": "zanimo.js dev",
+        "product_file_name": "zanimojsdev",
+        "api": "https://api.github.com",
+        "site": "https://github.com",
+        "clientId": "8246dbce64b5946c89a6",
+        "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org"
+      },
+      "prod": {
+        "id": "com.42loops.zanimo",
+        "product_name": "zanimo.js",
+        "product_file_name": "zanimojs",
+        "api": "https://api.github.com",
+        "site": "https://github.com",
+        "clientId": "8246dbce64b5946c89a6",
+        "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org"
+      }
+    },
+    "android": {
+      "default": {
+        "version": "0.1.0-dev",
+        "id": "com.fortytwoloops.zanimodev",
+        "product_name": "zanimojs dev",
+        "product_file_name": "zanimojsdev",
+        "api": "https://api.github.com",
+        "site": "https://github.com",
+        "clientId": "8246dbce64b5946c89a6",
+        "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org"
+      },
+      "prod": {
+        "id": "com.fortytwoloops.zanimo",
+        "product_name": "zanimo.js",
+        "product_file_name": "zanimojs",
+        "api": "https://api.github.com",
+        "site": "https://github.com",
+        "clientId": "8246dbce64b5946c89a6",
+        "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org",
+        "keystore_path":"~/keys/42loops.keystore",
+        "keystore_alias":"42loops",
+        "versionCode":"6"
+      }
+    },
+    "web": {
+      "default": {
+        "version": "0.1.0-dev",
+        "id": "com.42loops.zanimo",
+        "product_name": "zanimojs",
+        "product_file_name": "zanimojs",
+        "api": "https://api.github.com",
+        "site": "https://github.com",
+        "clientId": "4a1ad971d624e98fc684",
+        "gatekeeperUrl": "http://dev-zanimo.panserrieu.org",
+        "custom_url_scheme": "com.42loops.zanimo://zanimo.us/?gist=%i",
+        "intent": "intent://zanimo.us/?gist=%i/#Intent;scheme=zanimo;package=com.fortytwoloops.zanimo;end"
+      },
+      "prod": {
+        "id": "com.42loops.zanimo",
+        "product_name": "zanimojs",
+        "product_file_name": "zanimojs",
+        "api": "https://api.github.com",
+        "site": "https://github.com",
+        "clientId": "5050207707f0c5bf16c6",
+        "gatekeeperUrl": "http://zanimo.panserrieu.org",
+        "custom_url_scheme": "com.42loops.zanimo://zanimo.us/?gist=%i",
+        "intent": "intent://zanimo.us/?gist=%i/#Intent;scheme=zanimo;package=com.fortytwoloops.zanimo;end"
+      }
+    }
+  },
+  "cordova": {
+    "preferences": {
+      "DisallowOverscroll": true,
+      "EnableViewportScale": false,
+      "KeyboardDisplayRequiresUserAction": false,
+      "ShowSplashScreenSpinner": false,
+      "HideKeyboardFormAccessoryBar": false,
+      "SplashScreen": "screen",
+      "BackgroundColor": "0xffffffff",
+      "AutoHideSplashScreen": false,
+      "KeyboardShrinksView": true,
+      "KeepRunning": true,
+      "StatusBarOverlaysWebView": false,
+      "StatusBarBackgroundColor": "#76BDFF",
+      "SplashScreen": "screen"
+    },
+    "accessOrigin": [
+      "*"
+    ]
+  },
+  "author": {
+    "name": "Paul Panserrieu",
+    "email": "paul@42loops.com",
+    "href": "http://42loops.com"
+  }
+}

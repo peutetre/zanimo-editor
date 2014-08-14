@@ -1,0 +1,25 @@
+{
+  "name": "www-zanimo-editor",
+  "license": "MIT",
+  "dependencies": {
+    "q": "1.0.1",
+    "zanimo": "1.1.2",
+    "qstart": "0.2.0",
+    "mask": "0.2.2",
+    "github-api": "0.7.0",
+    "cookie": "0.1.2",
+    "qajax": "0.2.4",
+    "qimage": "1.2.0",
+    "image2base64": "0.0.2",
+    "mobile-button": "0.5.0",
+    "qanimationframe": "2.1.2",
+    "iscroll": "5.1.2"
+  },
+  "devDependencies": {
+    "browserify": "3.20.x",
+    "preprocess": "~2.0.0",
+    "rimraf": "^2.2.8",
+    "stylus": "0.42.0",
+    "tmp": "0.0.24"
+  }
+}
