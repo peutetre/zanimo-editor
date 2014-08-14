@@ -1,6 +1,5 @@
 /node_modules/
 .DS_Store
-/app/config.xml
 /app/platforms/ios/www/
 /app/platforms/ios/build/
 /app/platforms/android/gen/
