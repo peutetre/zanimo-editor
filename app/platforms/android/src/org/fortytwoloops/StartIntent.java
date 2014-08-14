@@ -1,4 +1,4 @@
-package com.fortytwoloops;
+package org.fortytwoloops;
 
 import org.apache.cordova.CordovaActivity;
 import android.content.Intent;
