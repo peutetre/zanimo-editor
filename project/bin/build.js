@@ -79,11 +79,13 @@ module.exports = function build(platform, settings, configurationName, verbose) 
             preprocess.preprocessFileSync(htmlSrc, htmlDest, {
                 PLATFORM : platform
             });
-            preprocess.preprocessFileSync(
-                path.join(__dirname, '../html/manifest.appcache'),
-                path.join(__dirname, '../www/manifest.appcache'),
-                { D:(new Date()) }
-            );
+            if (platform == 'web') {
+                preprocess.preprocessFileSync(
+                    path.join(__dirname, '../html/manifest.appcache'),
+                    path.join(__dirname, '../www/manifest.appcache'),
+                    { D:(new Date()) }
+                );
+            }
             style().then(function () {
                 if(verbose)
                     console.log('✔ www project build done with configuration ' + configurationName + '!');
