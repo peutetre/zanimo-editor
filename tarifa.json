@@ -62,7 +62,7 @@
         "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org",
         "keystore_path":"~/keys/42loops.keystore",
         "keystore_alias":"42loops",
-        "versionCode":"6"
+        "version_code":"6"
       }
     },
     "wp8": {
