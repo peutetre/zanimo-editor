@@ -39,7 +39,8 @@ menu.init = function (f, opts) {
 
     btn = new MobileButton.Touchend({
         el: $btn,
-        f : menu.trigger
+        f : menu.trigger,
+        monotouchable: true
     });
 
 };

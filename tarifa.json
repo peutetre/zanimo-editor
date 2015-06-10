@@ -13,17 +13,19 @@
     "cordova-plugin-console": "cordova-plugin-console@1.0.0",
     "cordova-plugin-device": "cordova-plugin-device@1.0.0",
     "cordova-plugin-network-information": "cordova-plugin-network-information@1.0.0",
-    "cordova-plugin-splashscreen": "cordova-plugin-splashscreen@1.0.0",
     "cordova-plugin-inappbrowser": "cordova-plugin-inappbrowser@1.0.0",
     "cordova-plugin-statusbar": "cordova-plugin-statusbar@1.0.0",
-    "cordova-plugin-social-message": "cordova-plugin-social-message@0.3.1"
+    "cordova-plugin-social-message": "cordova-plugin-social-message@0.3.1",
+    "org.apache.cordova.splashscreen": "cordova-plugin-splashscreen@1.0.0",
+    "cordova-plugin-whitelist": "cordova-plugin-whitelist@1.0.0",
+    "com.ionic.keyboard": "ionic-plugin-keyboard@1.0.4"
   },
   "configurations": {
     "ios": {
       "default": {
         "version": "0.1.1",
         "id": "com.42loops.zanimodev",
-        "product_name": "zanimo.js dev",
+        "product_name": "zanimo.js-dev",
         "product_file_name": "zanimojsdev",
         "api": "https://api.github.com",
         "site": "https://github.com",
@@ -59,9 +61,9 @@
         "site": "https://github.com",
         "clientId": "8246dbce64b5946c89a6",
         "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org",
-        "keystore_path":"~/keys/42loops.keystore",
-        "keystore_alias":"42loops",
-        "version_code":"6"
+        "keystore_path": "~/keys/42loops.keystore",
+        "keystore_alias": "42loops",
+        "version_code": "6"
       }
     },
     "wp8": {
@@ -116,27 +118,66 @@
   },
   "cordova": {
     "regions": {
-        "ios": ["English"],
-        "wp8": ["en"]
+      "ios": [
+        "English"
+      ],
+      "wp8": [
+        "en"
+      ]
+    },
+    "whitelist": {
+      "shared": [
+        {
+          "type": "access-origin",
+          "origin": [
+            "*"
+          ]
+        },
+        {
+          "type": "allow-intent",
+          "origin": [
+            "http://*/*",
+            "https://*/*"
+          ]
+        }
+      ],
+      "android": [
+        {
+          "type": "allow-intent",
+          "origin": [
+            "market:*"
+          ]
+        },
+        {
+          "type": "allow-navigation",
+          "origin": [
+            "*"
+          ]
+        }
+      ],
+      "ios": [
+        {
+          "type": "allow-intent",
+          "origin": [
+            "itms:*",
+            "itms-apps:*"
+          ]
+        }
+      ]
     },
     "preferences": {
       "DisallowOverscroll": true,
       "EnableViewportScale": false,
       "KeyboardDisplayRequiresUserAction": false,
       "ShowSplashScreenSpinner": false,
-      "HideKeyboardFormAccessoryBar": false,
       "SplashScreen": "screen",
       "BackgroundColor": "0xffffffff",
       "AutoHideSplashScreen": false,
       "KeyboardShrinksView": true,
       "KeepRunning": true,
       "StatusBarOverlaysWebView": false,
-      "StatusBarBackgroundColor": "#76BDFF",
-      "SplashScreen": "screen"
-    },
-    "accessOrigin": [
-      "*"
-    ]
+      "StatusBarBackgroundColor": "#76BDFF"
+    }
   },
   "author": {
     "name": "Paul Panserrieu",

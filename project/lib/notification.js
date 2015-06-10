@@ -11,13 +11,13 @@ var notification = {},
     toWhite = Zanimo.f("color", "#F0F1F3", 150),
     toGreen = Zanimo.f("color", "rgb(70, 170, 70)", 150),
     toRed = Zanimo.f("color", "rgb(255, 111, 111)", 150),
-    toLeft = Zanimo.f("transform", "translate3d(-170px,18px,0) rotate(150deg)", 150),
-    toRight = Zanimo.f("transform", "translate3d(170px,18px,0) rotate(150deg)", 150),
-    toOrigin = Zanimo.f("transform", "translate3d(0,18px,0) rotate(150deg)", 150),
+    toLeft = Zanimo.f("transform", "translate3d(-170px,0px,0)", 150),
+    toRight = Zanimo.f("transform", "translate3d(170px,0px,0)", 150),
+    toOrigin = Zanimo.f("transform", "translate3d(0,0px,0)", 150),
     toOpacity1 = Zanimo.f("opacity", 1, 150),
     toOpacity0 = Zanimo.f("opacity", 0, 150),
-    downStar = Zanimo.f("transform", "translate3d(0,18px,0) rotate(150deg)", 200, "ease-in-out"),
-    upStar = Zanimo.f("transform", "translate3d(0,0,0)", 200, "ease-in-out"),
+    downStar = Zanimo.f("transform", "translate3d(0,0px,0)", 200, "ease-in-out"),
+    upStar = Zanimo.f("transform", "translate3d(0,-18px,0)", 200, "ease-in-out"),
     initialized = false,
     inuse = false,
     active = false,
@@ -35,8 +35,8 @@ notification.init = function (config) {
         for (var op in options)
             if (config[op])
                 options[op] = config[op];
-    $star = _$.$(".chip span");
-    $star2 = _$.$(".chip2 span");
+    $star = _$.$(".chip");
+    $star2 = _$.$(".chip2");
     $txt = _$.$(".chip-container div.msg strong");
     initialized = true;
 
@@ -84,20 +84,20 @@ function setColor (e1,e2,e3, c) {
 
 notification.activate = function () {
     return Q.all([
-                Zanimo($star).then(downStar),
-                Zanimo($star2).then(downStar)
-            ]).then(function () {
-                active = true;
-            });
+        Zanimo($star).then(downStar),
+        Zanimo($star2).then(downStar)
+    ]).then(function () {
+        active = true;
+    });
 };
 
 notification.disable = function () {
     return Q.all([
-                Zanimo($star).then(upStar),
-                Zanimo($star2).then(upStar)
-            ]).then(function () {
-                active = false;
-            });
+        Zanimo($star).then(upStar),
+        Zanimo($star2).then(upStar)
+    ]).then(function () {
+        active = false;
+    });
 };
 
 notification.fail = function (msg, dur) {

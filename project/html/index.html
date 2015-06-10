@@ -1,5 +1,13 @@
 <!DOCTYPE html>
+
+<!-- @if PLATFORM = 'browser' -->
 <html manifest="manifest.appcache">
+<!-- @endif -->
+
+<!-- @if PLATFORM != 'browser' -->
+<html>
+<!-- @endif -->
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -145,9 +153,9 @@
             </section>
             <div class="active-area">
                 <div class="chip-container">
-                    <div class="chip2"><span>✴</span></div>
+                    <div class="chip2">●</div>
                     <div class="msg"><strong>&nbsp;</strong></div>
-                    <div class="chip"><span>✴</span></div>
+                    <div class="chip">●</div>
                 </div>
             </div>
         </article>

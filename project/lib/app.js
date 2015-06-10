@@ -110,7 +110,7 @@ app.init = function () {
 };
 
 app.hideSplashscreen = function (arg) {
-    if (window.cordova) setTimeout(navigator.splashscreen.hide, 2000);
+    window.navigator.splashscreen.hide();
     return arg;
 };
 
@@ -133,6 +133,9 @@ if(window.cordova) {
         document.addEventListener('backbutton', function (evt) {
             evt.preventDefault();
         });
+
+        cordova.plugins.Keyboard.disableScroll(true);
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 
         app.init()
             .done(function () {

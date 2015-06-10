@@ -99,26 +99,26 @@ editor.init = function () {
         $editor.addEventListener("touchstart", editor.onTouchStart);
     }
     (new MobileButton.Touchend({
-        el: $.$("button.icon-play", $editor), f: editor.onPlay
+        el: $.$("button.icon-play", $editor), f: editor.onPlay, monotouchable: true
     }));
     (new MobileButton.Touchend({
-        el: $.$("button.icon-save", $editor), f: editor.onSave
+        el: $.$("button.icon-save", $editor), f: editor.onSave, monotouchable: true
     }));
     (new MobileButton.Touchend({
-        el: $.$("button.icon-trash", $editor), f: editor.onTrash
+        el: $.$("button.icon-trash", $editor), f: editor.onTrash, monotouchable: true
     }));
     (new MobileButton.Touchend({
-        el: $signBtn, f: editor.onSign
+        el: $signBtn, f: editor.onSign, monotouchable: true
     }));
     (new MobileButton.Touchend({
-        el: $logoutBtn, f: editor.onLogout
+        el: $logoutBtn, f: editor.onLogout, monotouchable: true
     }));
     if($.isWPCordova) {
         $.$("button.icon-share-sign").style.display = 'none';
     }
     else {
         (new MobileButton.Touchend({
-            el: $.$("button.icon-share-sign", $editor), f: editor.onShare
+            el: $.$("button.icon-share-sign", $editor), f: editor.onShare, monotouchable: true
         }));
     }
 
@@ -128,7 +128,7 @@ editor.init = function () {
         $textarea.addEventListener('focus', menu.hide);
     }
 
-    if(window.cordova && window.cordova.platformId === 'ios') {
+    /*if(window.cordova && window.cordova.platformId === 'ios') {
         window.Keyboard.onshow = window.Keyboard.onhide = function () {
             if(window.Keyboard.isVisible) menu.hide();
             Qanimationframe(function () {
@@ -138,7 +138,7 @@ editor.init = function () {
                 el.style.webkitOverflowScrolling = 'touch';
             });
         };
-    }
+    }*/
 };
 
 editor.pause = function () {
