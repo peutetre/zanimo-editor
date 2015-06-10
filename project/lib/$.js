@@ -18,11 +18,14 @@ exports.isMobile = isMobile;
 exports.isWPCordova = isWPCordova;
 
 exports.getViewportHeight = function () {
-	var d = Q.defer();
-	if(isWPCordova) d.resolve(window.innerHeight);
-	else d.resolve(isMobile ? window.outerHeight : window.innerHeight);
+    var d = Q.defer(),
+        inner = window.innerHeight,
+        outer = window.outerHeight;
 
-	return d.promise;
+    if(isWPCordova) d.resolve(inner);
+    else d.resolve(isMobile ? (outer || inner) : inner);
+
+    return d.promise;
 };
 
 exports.detect = {
