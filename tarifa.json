@@ -1,28 +1,27 @@
 {
   "name": "zanimo.js",
-  "id": "com.42loops.zanimo",
+  "id": "com.fortytwoloops.zanimo",
   "description": "the zanimo.js editor",
   "version": "0.1.0",
   "platforms": [
-    "ios",
-    "android",
-    "wp8",
-    "web"
+    "ios@3.8.0",
+    "android@4.0.2",
+    "wp8@3.7.1",
+    "browser@3.6.0"
   ],
-  "plugins": [
-    "org.apache.cordova.console",
-    "org.apache.cordova.device",
-    "org.apache.cordova.network-information",
-    "org.apache.cordova.splashscreen",
-    "org.apache.cordova.inappbrowser",
-    "org.apache.cordova.keyboard",
-    "org.apache.cordova.statusbar",
-    "socialmessage"
-  ],
+  "plugins": {
+    "cordova-plugin-console": "cordova-plugin-console@1.0.0",
+    "cordova-plugin-device": "cordova-plugin-device@1.0.0",
+    "cordova-plugin-network-information": "cordova-plugin-network-information@1.0.0",
+    "cordova-plugin-splashscreen": "cordova-plugin-splashscreen@1.0.0",
+    "cordova-plugin-inappbrowser": "cordova-plugin-inappbrowser@1.0.0",
+    "cordova-plugin-statusbar": "cordova-plugin-statusbar@1.0.0",
+    "cordova-plugin-social-message": "cordova-plugin-social-message@0.3.1"
+  },
   "configurations": {
     "ios": {
       "default": {
-        "version": "0.1.0-dev",
+        "version": "0.1.1",
         "id": "com.42loops.zanimodev",
         "product_name": "zanimo.js dev",
         "product_file_name": "zanimojsdev",
@@ -43,7 +42,7 @@
     },
     "android": {
       "default": {
-        "version": "0.1.0-dev",
+        "version": "0.1.1",
         "id": "com.fortytwoloops.zanimodev",
         "product_name": "zanimojs dev",
         "product_file_name": "zanimojsdev",
@@ -67,7 +66,7 @@
     },
     "wp8": {
       "default": {
-        "version": "0.1.0-dev",
+        "version": "0.1.1",
         "id": "com.fortytwoloops.zanimodev",
         "product_name": "zanimo.js dev",
         "product_file_name": "zanimojsdev",
@@ -89,9 +88,9 @@
         "guid": "E482326F-CC42-4776-97E6-F68B434A9C2F"
       }
     },
-    "web": {
+    "browser": {
       "default": {
-        "version": "0.1.0-dev",
+        "version": "0.1.1",
         "id": "com.42loops.zanimo",
         "product_name": "zanimojs",
         "product_file_name": "zanimojs",
@@ -116,6 +115,10 @@
     }
   },
   "cordova": {
+    "regions": {
+        "ios": ["English"],
+        "wp8": ["en"]
+    },
     "preferences": {
       "DisallowOverscroll": true,
       "EnableViewportScale": false,

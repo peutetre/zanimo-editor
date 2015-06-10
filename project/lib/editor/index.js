@@ -74,11 +74,10 @@ editor.init = function () {
     $signBtn = $.$("button.sign", $editor);
     $logoutBtn = $.$("button.logout", $editor);
 
-
     _editor = codeMirror.fromTextArea($textarea, {
         lineNumbers: true,
         matchBrackets: true,
-        indentUnit: 4,
+        theme: 'neo',
         extraKeys: { "Enter" : "newlineAndIndentContinueComment" }
     });
 
@@ -99,7 +98,6 @@ editor.init = function () {
     if($.isTouchable) {
         $editor.addEventListener("touchstart", editor.onTouchStart);
     }
-
     (new MobileButton.Touchend({
         el: $.$("button.icon-play", $editor), f: editor.onPlay
     }));
@@ -115,7 +113,6 @@ editor.init = function () {
     (new MobileButton.Touchend({
         el: $logoutBtn, f: editor.onLogout
     }));
-
     if($.isWPCordova) {
         $.$("button.icon-share-sign").style.display = 'none';
     }

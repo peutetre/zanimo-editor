@@ -230,7 +230,7 @@ user.logout = function () {
 user.authenticate = function () {
     var ghoauth = settings.site + "/login/oauth/authorize?client_id=" + settings.clientId + "&scope=gist";
     var childbrowser;
-    if(window.cordova) {
+    if(window.cordova.platformId !== 'browser') {
         if (isWPCordova) {
             childbrowser = window.open(ghoauth, '_blank', 'location=no');
         } else {
