@@ -12,7 +12,6 @@
   "plugins": {
     "cordova-plugin-console": "cordova-plugin-console@1.0.0",
     "cordova-plugin-device": "cordova-plugin-device@1.0.0",
-    "cordova-plugin-network-information": "cordova-plugin-network-information@1.0.0",
     "cordova-plugin-inappbrowser": "cordova-plugin-inappbrowser@1.0.0",
     "cordova-plugin-statusbar": "cordova-plugin-statusbar@1.0.0",
     "cordova-plugin-social-message": "cordova-plugin-social-message@0.3.1",

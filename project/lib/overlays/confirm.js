@@ -13,6 +13,7 @@ var Q = require('q'),
     $title = null,
     $msg = null,
     $okBtn = null,
+    $okLink = null,
     $closeBtn = null,
     okBtn = null,
     closeBtn = null,
@@ -40,10 +41,15 @@ confirm.init = function () {
         $okBtn = $.DOM('span');
         $okBtn.className = 'ok';
         $okBtn.innerHTML = 'YES';
+        $okLink = $.DOM('a');
+        $okLink.style.display = 'none';
+        $okLink.innerHTML = 'YES';
+        $okLink.className = 'ok';
         el.appendChild($title);
         el.appendChild($msg);
         el.appendChild($closeBtn);
         el.appendChild($okBtn);
+        el.appendChild($okLink);
         window.document.body.appendChild(el);
 
         closeBtn = new MobileButton.Touchend({
@@ -79,7 +85,7 @@ function _hide() {
     ]).then(function () {
         displayed = false;
         closeBtn.unbind();
-        okBtn.unbind();
+        if(!link) okBtn.unbind();
     });
 }
 
@@ -97,10 +103,20 @@ function onCloseBtn(evt) {
     return _hide().then(resolve(false), resolve(false));
 }
 
-confirm.confirm = function (title, msg) {
+confirm.confirm = function (title, msg, link) {
     defer = Q.defer();
     $title.innerHTML = title;
     $msg.innerHTML = msg;
+
+    if(link) {
+        $okLink.href = link;
+        $okBtn.style.display = 'none';
+        $okLink.style.display = 'block';
+    } else {
+        $okBtn.style.display = 'block';
+        $okLink.style.display = 'none';
+    }
+
     Q.all([
         Zanimo(
             el, 'transform',
@@ -111,7 +127,7 @@ confirm.confirm = function (title, msg) {
     ]).then(function () {
         displayed = true;
         closeBtn.bind();
-        okBtn.bind();
+        if(!link) okBtn.bind();
     });
     return defer.promise;
 }

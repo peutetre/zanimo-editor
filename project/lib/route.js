@@ -8,19 +8,7 @@ var Q = require('q'),
     $ = require('./$');
 
 function getUri() {
-    var defer = Q.defer();
-    if(window.cordova && $.detect.android) {
-        cordova.exec(function(uri) {
-            if(!uri) defer.resolve(window.location.href);
-            else defer.resolve(uri);
-        }, function(err) {
-            defer.reject(err);
-        }, 'WebIntent', 'getUri', []);
-    }
-    else {
-        defer.resolve(window.location.href);
-    }
-    return defer.promise;
+    return Q(window.location.href);
 };
 
 function route(routes) {
@@ -32,8 +20,10 @@ function route(routes) {
 
             for(r in routes) {
                 match = uri.match(window.RegExp(r));
+                console.log(match, r);
                 if(match) return routes[r](match);
             }
+            console.log('OOOOPS');
             if(routes[""]) return routes[""]();
         }, function (err) {
             console.log(err);

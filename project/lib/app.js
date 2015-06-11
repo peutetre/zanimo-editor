@@ -54,16 +54,15 @@ app.actionRunner = function (match) {
 };
 
 app.onActionRunnerWithInit = function (match) {
-
-    if(!window.cordova && ($.detect.ios || $.detect.android)){
-        return confirm.confirm("Animation", "Run the animation on the App?").then(function (val) {
-            if(!val) {
-                return app.actionRunner(match);
-            }
-            else {
-                var href = $.detect.ios ? settings.custom_url_scheme : settings.intent;
-                window.location.href = href.replace('%i', match[1]);
-            }
+    if(window.cordova.platformId === 'browser' && ($.detect.ios || $.detect.android)){
+        var scheme = settings.custom_url_scheme.replace('%i', match[1]);
+        return confirm.confirm(
+            "Animation",
+            "Run the animation on the App?",
+            $.detect.android && scheme
+        ).then(function (val) {
+            if(!val) return app.actionRunner(match);
+            else window.open(scheme, '_system');
         });
     }
     else {
