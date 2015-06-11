@@ -7,7 +7,6 @@ CACHE MANIFEST
 /css/style.css
 /vendor/font-awesome/css/font-awesome.css
 /vendor/codemirror/codemirror-5.3.js
-/app.js
 /images/arrow@2x.png
 /images/demo.gif
 /vendor/font-awesome/font/fontawesome-webfont.woff?v=3.2.1
