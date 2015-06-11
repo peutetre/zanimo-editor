@@ -416,6 +416,14 @@ cat = function cat(t) {
   ];
 },
 
+catn = function (n) {
+  return function (t) {
+    return cat(t).map(function (v) {
+      return v*n;
+    });
+  }
+},
+
 pointConfig = {
   backgroundColor:
     'rgba(10,10,10,0.5)',
@@ -483,11 +491,17 @@ for(var i=0; i<n; i++) {
 
 points = create(points);
 
-return apply(cir, points, 0,2*PI)
+return apply(cat, points, 0,0)
+  .then(applyf(cat, points, 0,0.25*PI))
+  .then(applyf(cat, points, 0,0.5*PI)) 
+  .then(applyf(cat, points, 0,0.75*PI))
+  .then(applyf(cat, points, 0,1*PI))
+  .then(applyf(cat, points, 0,1.25*PI))
+  .then(applyf(cat, points, 0,1.5*PI)) 
+  .then(applyf(cat, points, 0,1.75*PI))
   .then(applyf(cat, points, 0,2*PI))
-  .then(applyf(cir, points, 0,2*PI))
-  .then(applyf(cat, points, 0,2*PI))
-  .delay(2000);
+  .then(applyf(catn(1), points, 0,2*PI))
+  .delay(1000);
 </script>
 
 <script id="empty-script-code" type="text/tmpl">
