@@ -266,14 +266,13 @@ editor._createImageAvatar = function (u) {
         return Q.resolve(image);
     }
     else {
-        return Qimage(u.avatar_url, { crossOrigin: "Anonymous" })
-            .then(function (img) {
-                storage.setItem(
-                    'zaeun-' + u.login,
-                    Image2Base64(img)
-                );
-                return img;
-            });
+        return Qimage.anonymously(u.avatar_url).then(function (img) {
+            storage.setItem(
+                'zaeun-' + u.login,
+                Image2Base64(img)
+            );
+            return img;
+        });
     }
 };
 

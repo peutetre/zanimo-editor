@@ -2,7 +2,7 @@
   "name": "zanimo.js",
   "id": "com.fortytwoloops.zanimo",
   "description": "the zanimo.js editor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "platforms": [
     "ios@3.8.0",
     "android@4.0.2",
@@ -28,7 +28,6 @@
   "configurations": {
     "ios": {
       "default": {
-        "version": "0.1.1",
         "id": "com.42loops.zanimodev",
         "product_name": "zanimo.js-dev",
         "product_file_name": "zanimojsdev",
@@ -49,7 +48,6 @@
     },
     "android": {
       "default": {
-        "version": "0.1.1",
         "id": "com.fortytwoloops.zanimodev",
         "product_name": "zanimojs dev",
         "product_file_name": "zanimojsdev",
@@ -67,13 +65,11 @@
         "clientId": "8246dbce64b5946c89a6",
         "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org",
         "keystore_path": "~/keys/42loops.keystore",
-        "keystore_alias": "42loops",
-        "version_code": "6"
+        "keystore_alias": "42loops"
       }
     },
     "wp8": {
       "default": {
-        "version": "0.1.1",
         "id": "com.fortytwoloops.zanimodev",
         "product_name": "zanimo.js dev",
         "product_file_name": "zanimojsdev",
@@ -97,7 +93,6 @@
     },
     "browser": {
       "default": {
-        "version": "0.1.1",
         "id": "com.42loops.zanimo",
         "product_name": "zanimojs",
         "product_file_name": "zanimojs",
