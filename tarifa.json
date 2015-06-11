@@ -181,7 +181,8 @@
       "KeyboardShrinksView": true,
       "KeepRunning": true,
       "StatusBarOverlaysWebView": false,
-      "StatusBarBackgroundColor": "#76BDFF"
+      "StatusBarBackgroundColor": "#76BDFF",
+      "Orientation":"portrait"
     }
   },
   "author": {
