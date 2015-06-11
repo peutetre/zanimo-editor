@@ -23,7 +23,6 @@ function route(routes) {
                 console.log(match, r);
                 if(match) return routes[r](match);
             }
-            console.log('OOOOPS');
             if(routes[""]) return routes[""]();
         }, function (err) {
             console.log(err);
