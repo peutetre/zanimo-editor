@@ -235,7 +235,6 @@ user.authenticate = function () {
             childbrowser = window.open(ghoauth, '_blank', 'location=no');
         } else {
             childbrowser = window.open(ghoauth, '_blank', 'location=no,closebuttoncaption=Cancel,clearcache=yes,clearsessioncache=yes');
-            childbrowser.clear();
         }
 
         childbrowser.addEventListener('loadstop', function (evt) {
