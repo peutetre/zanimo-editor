@@ -18,7 +18,13 @@
     "cordova-plugin-social-message": "cordova-plugin-social-message@0.3.1",
     "org.apache.cordova.splashscreen": "cordova-plugin-splashscreen@1.0.0",
     "cordova-plugin-whitelist": "cordova-plugin-whitelist@1.0.0",
-    "com.ionic.keyboard": "ionic-plugin-keyboard@1.0.4"
+    "com.ionic.keyboard": "ionic-plugin-keyboard@1.0.4",
+    "nl.x-services.plugins.launchmyapp": {
+      "uri": "https://github.com/peutetre/Custom-URL-scheme.git",
+      "variables": {
+        "URL_SCHEME": "com.42loops.zanimo"
+      }
+    }
   },
   "configurations": {
     "ios": {
