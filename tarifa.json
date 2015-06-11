@@ -27,6 +27,9 @@
   },
   "configurations_mixins": {
     "default": {
+      "id": "com.fortytwoloops.zanimo",
+      "product_name": "zanimo.js",
+      "product_file_name": "zanimo.js",
       "api": "https://api.github.com",
       "site": "https://github.com",
       "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org",
@@ -46,9 +49,9 @@
       "prod": {
         "extend": "default",
         "id": "com.42loops.zanimo",
-        "product_name": "zanimo.js",
-        "product_file_name": "zanimojs",
-        "clientId": "8246dbce64b5946c89a6"
+        "clientId": "8246dbce64b5946c89a6",
+        "release": true,
+        "sign": "store"
       }
     },
     "android": {
@@ -61,12 +64,9 @@
       },
       "prod": {
         "extend": "default",
-        "id": "com.fortytwoloops.zanimo",
-        "product_name": "zanimo.js",
-        "product_file_name": "zanimojs",
         "clientId": "8246dbce64b5946c89a6",
-        "keystore_path": "~/keys/42loops.keystore",
-        "keystore_alias": "42loops"
+        "release": true,
+        "sign": "store"
       }
     },
     "wp8": {
@@ -80,9 +80,6 @@
       },
       "prod": {
         "extend": "default",
-        "id": "com.fortytwoloops.zanimo",
-        "product_name": "zanimo.js",
-        "product_file_name": "zanimojs",
         "clientId": "8246dbce64b5946c89a6",
         "release_mode": true,
         "guid": "E482326F-CC42-4776-97E6-F68B434A9C2F"
@@ -91,16 +88,12 @@
     "browser": {
       "default": {
         "extend": "default",
-        "id": "com.42loops.zanimo",
-        "product_name": "zanimojs",
-        "product_file_name": "zanimojs",
+        "product_file_name":"zanimojs",
         "clientId": "4a1ad971d624e98fc684"
       },
       "prod": {
         "extend": "default",
-        "id": "com.42loops.zanimo",
-        "product_name": "zanimojs",
-        "product_file_name": "zanimojs",
+        "product_file_name":"zanimojs",
         "clientId": "5050207707f0c5bf16c6"
       }
     }
@@ -173,5 +166,20 @@
     "name": "Paul Panserrieu",
     "email": "paul@42loops.com",
     "href": "http://42loops.com"
+  },
+  "signing": {
+    "ios": {
+        "store": {
+          "identity": "FIXME or overwrite in private.json",
+          "provisioning_path": "FIXME or overwrite in private.json",
+          "provisioning_name": "FIXME or overwrite in private.json"
+        }
+    },
+    "android": {
+      "store": {
+        "keystore_path": "FIXME or overwrite in private.json",
+        "keystore_alias": "FIXME or overwrite in private.json"
+      }
+    }
   }
 }
