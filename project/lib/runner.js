@@ -8,6 +8,7 @@ var Q = require('q'),
     Zanimo = require('zanimo'),
     Qajax = require('qajax'),
     Qimage = require('qimage'),
+    randomColor = require('randomcolor'),
     $ = require('./$'),
 
     notification = require('./notification'),
@@ -45,6 +46,7 @@ runner.run = function (code) {
                 "Zanimo",
                 "Qajax",
                 "Qimage",
+                "randomColor",
                 "create",
                 "width",
                 "height",
@@ -63,6 +65,7 @@ runner.run = function (code) {
                     Zanimo,
                     Qajax,
                     Qimage,
+                    randomColor,
                     runner.create,
                     window.innerWidth,
                     window.innerHeight

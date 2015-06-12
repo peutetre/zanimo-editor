@@ -13,6 +13,7 @@
     "qanimationframe": "2.1.2",
     "qimage": "1.3.0",
     "qstart": "0.2.0",
+    "randomcolor": "^0.2.0",
     "zanimo": "1.1.3"
   },
   "devDependencies": {

@@ -98,13 +98,15 @@
                     <p class='normal'>A script is the body of a function with the following arguments:</p>
                     <dl>
                         <dt>Q</dt>
-                        <dd>the Q library</dd>
+                        <dd>the Q library, <a href="#" onclick='window.open("https://github.com/kriskowal/q", "_system");'>documentation</a></dd>
                         <dt>Zanimo</dt>
                         <dd>the Zanimo library</dd>
                         <dt>Qajax</dt>
-                        <dd>the Qajax library</dd>
+                        <dd>the Qajax library, <a href="#" onclick='window.open("https://github.com/gre/qajax", "_system");'>documentation</a></dd>
                         <dt>Qimage</dt>
-                        <dd>the Qimage library</dd>
+                        <dd>the Qimage library, <a href="#" onclick='window.open("https://github.com/gre/qimage", "_system");'>documentation</a></dd>
+                        <dt>randomColor</dt>
+                        <dd>generate random colors, <a href="#" onclick='window.open("https://github.com/davidmerfield/randomColor", "_system");'>documentation</a></dd>
                         <dt>create</dt>
                         <dd>helper for creating dom elements and appending them to the document body</dd>
                         <dt>width</dt>
@@ -207,10 +209,12 @@
  * damier
  */
 
-var n = 4,
+var n = 6,
+time = 4,
 floor = Math.floor,
 rand = Math.random,
 elements = [],
+hsl = [],
 rectangle = function (w, h) {
   return create({
     width: w + 'px',
@@ -230,25 +234,19 @@ initialize = function (idx) {
       + x + 'px,'
       + y + 'px,0px)'
   );
-},
-hsl = function () {
-  var a = floor(rand()*360),
-    b = floor(rand() * 100),
-    c = floor(rand() * 100);
- return 'hsl('+a+','+b+'%,'+c+'%)';
-},
-colorize = function () {
+},  
+colorize = function (idx, t) {
   return Zanimo.f(
-    'background', hsl()
+    'background', hsl[t%time][idx]
   );
 },
 apply = function (els, F) {
-  return function () {
+  return function (t) {
     return els.reduce(
       function (prev, el, idx){
         return prev.then(
           function () {
-            return F(idx)(el);
+            return F(idx, t)(el);
           }
         );
     }, Q());
@@ -256,13 +254,9 @@ apply = function (els, F) {
 },
 times = function (k, f) {
   return function () {
-    if (k > 0) {
-      return f().then(
-        function () {
-          return times(k-1,f)();
-        }
-      );
-    }
+    if (k > 0)
+      return f(k).then(times(k-1,f));
+    else return Q();
   };
 };
 
@@ -274,10 +268,16 @@ for (i=0 ;i<n; i++) {
   }
 }
 
+for(var i=0; i<time; i++){
+  hsl.push(randomColor({
+    count: n*n, hue:'blue'
+  }));
+}
+
 return apply(elements,initialize)()
   .then(
     times(
-      5, apply(elements, colorize)
+      time, apply(elements, colorize)
     )
   );
 </script>
