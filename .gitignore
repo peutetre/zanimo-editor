@@ -7,3 +7,5 @@
 /app/www
 project/bin/settings.json
 private.json
+project/www/manifest.appcache
+project/www/css/style.css
