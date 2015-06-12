@@ -33,23 +33,21 @@
       "api": "https://api.github.com",
       "site": "https://github.com",
       "gatekeeperUrl": "http://zanimo-cordova.panserrieu.org",
-      "custom_url_scheme": "com.42loops.zanimo://zanimo.us/?gist=%i"
+      "custom_url_scheme": "com.42loops.zanimo://zanimo.us/?gist=%i",
+      "clientId": "8246dbce64b5946c89a6"
     }
   },
-
   "configurations": {
     "ios": {
       "default": {
         "extend": "default",
         "id": "com.42loops.zanimodev",
         "product_name": "zanimo.js-dev",
-        "product_file_name": "zanimojsdev",
-        "clientId": "8246dbce64b5946c89a6"
+        "product_file_name": "zanimojsdev"
       },
       "prod": {
         "extend": "default",
         "id": "com.42loops.zanimo",
-        "clientId": "8246dbce64b5946c89a6",
         "release": true,
         "sign": "store"
       }
@@ -59,12 +57,10 @@
         "extend": "default",
         "id": "com.fortytwoloops.zanimodev",
         "product_name": "zanimojs dev",
-        "product_file_name": "zanimojsdev",
-        "clientId": "8246dbce64b5946c89a6"
+        "product_file_name": "zanimojsdev"
       },
       "prod": {
         "extend": "default",
-        "clientId": "8246dbce64b5946c89a6",
         "release": true,
         "sign": "store"
       }
@@ -75,12 +71,10 @@
         "id": "com.fortytwoloops.zanimodev",
         "product_name": "zanimo.js dev",
         "product_file_name": "zanimojsdev",
-        "clientId": "8246dbce64b5946c89a6",
         "guid": "4ef2e271-8180-44f1-b437-4f932b28f90a"
       },
       "prod": {
         "extend": "default",
-        "clientId": "8246dbce64b5946c89a6",
         "release_mode": true,
         "guid": "E482326F-CC42-4776-97E6-F68B434A9C2F"
       }
@@ -88,12 +82,12 @@
     "browser": {
       "default": {
         "extend": "default",
-        "product_file_name":"zanimojs",
+        "product_file_name": "zanimojs",
         "clientId": "4a1ad971d624e98fc684"
       },
       "prod": {
         "extend": "default",
-        "product_file_name":"zanimojs",
+        "product_file_name": "zanimojs",
         "clientId": "5050207707f0c5bf16c6"
       }
     }
@@ -159,7 +153,7 @@
       "KeepRunning": true,
       "StatusBarOverlaysWebView": false,
       "StatusBarBackgroundColor": "#76BDFF",
-      "Orientation":"portrait"
+      "Orientation": "portrait"
     }
   },
   "author": {
