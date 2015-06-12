@@ -62,7 +62,8 @@
       "prod": {
         "extend": "default",
         "release": true,
-        "sign": "store"
+        "sign": "store",
+        "min_sdk_version": 19
       }
     },
     "wp8": {
