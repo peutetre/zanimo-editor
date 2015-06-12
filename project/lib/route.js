@@ -20,7 +20,6 @@ function route(routes) {
 
             for(r in routes) {
                 match = uri.match(window.RegExp(r));
-                console.log(match, r);
                 if(match) return routes[r](match);
             }
             if(routes[""]) return routes[""]();

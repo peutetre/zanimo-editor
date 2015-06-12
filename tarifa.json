@@ -83,13 +83,13 @@
     "browser": {
       "default": {
         "extend": "default",
-        "product_file_name": "zanimojs",
-        "clientId": "4a1ad971d624e98fc684"
+        "product_file_name": "zanimojs"
       },
       "prod": {
         "extend": "default",
         "product_file_name": "zanimojs",
-        "clientId": "5050207707f0c5bf16c6"
+        "clientId":"5050207707f0c5bf16c6",
+        "gatekeeperUrl": "http://zanimo.panserrieu.org"
       }
     }
   },
