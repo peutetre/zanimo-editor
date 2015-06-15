@@ -2,7 +2,7 @@
   "name": "zanimo.js",
   "id": "com.fortytwoloops.zanimo",
   "description": "the zanimo.js editor",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "platforms": [
     "ios@3.8.0",
     "android@4.0.2",

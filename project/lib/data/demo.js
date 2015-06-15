@@ -10,9 +10,11 @@ var Q = require('q'),
 
 demo.init = function () {
     var demo1Code = $("#demo-0").innerHTML,
-        demo2Code = $("#demo-1").innerHTML;
+        demo2Code = $("#demo-1").innerHTML,
+        demo3Code = $("#demo-2").innerHTML;
     demo.create("damier", demo1Code);
     demo.create("cat_curve", demo2Code);
+    demo.create("star", demo3Code);
     return Q.resolve(true);
 };
 

@@ -533,6 +533,20 @@ return Zanimo(
     ));
 </script>
 
+<script id="demo-2" type="text/tmpl">
+var star = create({
+  top: (height/2 - 100) + 'px',
+  left: (width/2 - 100) + 'px'
+}, 'div', 'star-five-red');
+
+return Q.delay(star, 1000).then(Zanimo.f(
+  'transform',
+  'rotate(395deg)',
+  2000,
+  'ease-in-out'
+));
+</script>
+
         <!-- @if PLATFORM = 'browser' -->
         <script src="vendor/codemirror/codemirror-5.3.js"></script>
         <!-- @endif -->

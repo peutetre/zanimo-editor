@@ -84,16 +84,21 @@ runner.run = function (code) {
     }
 };
 
-runner.create = function (definitions, tag) {
+runner.create = function (definitions, tag, cls) {
     var el, attr, items = [];
     if (definitions instanceof Array) {
         definitions.forEach(function (def) {
             el = $.DOM(tag || 'div');
-            el.style.width = "100px";
-            el.style.height = "100px";
-            el.style.position = "absolute";
-            el.style.backgroundColor = "rgb(118, 189, 255)";
+            if(cls) el.className = cls;
+            else {
+                el.style.width = "100px";
+                el.style.height = "100px";
+                el.style.position = "absolute";
+                el.style.backgroundColor = "rgb(118, 189, 255)";
+            }
+
             el.style.zIndex = 10000;
+
             for(attr in def) {
                 el.style[attr] = def[attr];
             }
@@ -105,10 +110,13 @@ runner.create = function (definitions, tag) {
     }
     else if(definitions instanceof Object) {
         el = $.DOM(tag || 'div');
-        el.style.width = "100px";
-        el.style.height = "100px";
-        el.style.position = "absolute";
-        el.style.backgroundColor = "rgb(118, 189, 255)";
+        if(cls) el.className = cls;
+        else {
+            el.style.width = "100px";
+            el.style.height = "100px";
+            el.style.position = "absolute";
+            el.style.backgroundColor = "rgb(118, 189, 255)";
+        }
         el.style.zIndex = 10000;
         for(attr in definitions) {
             el.style[attr] = definitions[attr];
